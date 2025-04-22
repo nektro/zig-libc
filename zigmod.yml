@@ -1,0 +1,6 @@
+id: 0qdrszyg8gxg574zuidgavge0qf1gub2dvcdubk2hvchl7ld
+name: libc
+main: mod.zig
+license: MIT
+description: extern definitions for calling C functions
+dependencies:
