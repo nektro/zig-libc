@@ -44,7 +44,7 @@ pub extern fn abort() void;
 
 /// int abs(int i);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/abs.html
-pub const abs = @compileError("TODO: abs");
+pub extern fn abs(i: c_int) c_int;
 
 /// int accept(int socket, struct sockaddr *restrict address, socklen_t *restrict address_len);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/accept.html
@@ -1004,7 +1004,7 @@ pub const fflush = @compileError("TODO: fflush");
 
 /// int ffs(int i);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/ffs.html
-pub const ffs = @compileError("TODO: ffs");
+pub extern fn ffs(i: c_int) c_int;
 
 /// int fgetc(FILE *stream);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/fgetc.html
