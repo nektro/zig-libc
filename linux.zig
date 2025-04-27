@@ -208,7 +208,7 @@ pub const bsearch = @compileError("TODO: bsearch");
 
 /// wint_t btowc(int c);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/btowc.html
-pub const btowc = @compileError("TODO: btowc");
+pub extern fn btowc(c: c_int) c_int;
 
 /// double cabs(double complex z);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/cabs.html
@@ -1628,7 +1628,7 @@ pub const ioctl = @compileError("TODO: ioctl");
 
 /// int isalnum(int c);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/isalnum.html
-pub const isalnum = @compileError("TODO: isalnum");
+pub extern fn isalnum(c: c_int) c_int;
 
 /// int isalnum_l(int c, locale_t locale);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/isalnum_l.html
@@ -1636,7 +1636,7 @@ pub const isalnum_l = @compileError("TODO: isalnum_l");
 
 /// int isalpha(int c);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/isalpha.html
-pub const isalpha = @compileError("TODO: isalpha");
+pub extern fn isalpha(c: c_int) c_int;
 
 /// int isalpha_l(int c, locale_t locale);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/isalpha_l.html
@@ -1644,7 +1644,7 @@ pub const isalpha_l = @compileError("TODO: isalpha_l");
 
 /// int isascii(int c);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/isascii.html
-pub const isascii = @compileError("TODO: isascii");
+pub extern fn isascii(c: c_int) c_int;
 
 /// int isastream(int fildes);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/isastream.html
@@ -1656,7 +1656,7 @@ pub const isatty = @compileError("TODO: isatty");
 
 /// int isblank(int c);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/isblank.html
-pub const isblank = @compileError("TODO: isblank");
+pub extern fn isblank(c: c_int) c_int;
 
 /// int isblank_l(int c, locale_t locale);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/isblank_l.html
@@ -1664,7 +1664,7 @@ pub const isblank_l = @compileError("TODO: isblank_l");
 
 /// int iscntrl(int c);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/iscntrl.html
-pub const iscntrl = @compileError("TODO: iscntrl");
+pub extern fn iscntrl(c: c_int) c_int;
 
 /// int iscntrl_l(int c, locale_t locale);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/iscntrl_l.html
@@ -1672,7 +1672,7 @@ pub const iscntrl_l = @compileError("TODO: iscntrl_l");
 
 /// int isdigit(int c);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/isdigit.html
-pub const isdigit = @compileError("TODO: isdigit");
+pub extern fn isdigit(c: c_int) c_int;
 
 /// int isdigit_l(int c, locale_t locale);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/isdigit_l.html
@@ -1680,7 +1680,7 @@ pub const isdigit_l = @compileError("TODO: isdigit_l");
 
 /// int isgraph(int c);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/isgraph.html
-pub const isgraph = @compileError("TODO: isgraph");
+pub extern fn isgraph(c: c_int) c_int;
 
 /// int isgraph_l(int c, locale_t locale);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/isgraph_l.html
@@ -1688,7 +1688,7 @@ pub const isgraph_l = @compileError("TODO: isgraph_l");
 
 /// int islower(int c);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/islower.html
-pub const islower = @compileError("TODO: islower");
+pub extern fn islower(c: c_int) c_int;
 
 /// int islower_l(int c, locale_t locale);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/islower_l.html
@@ -1696,7 +1696,7 @@ pub const islower_l = @compileError("TODO: islower_l");
 
 /// int isprint(int c);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/isprint.html
-pub const isprint = @compileError("TODO: isprint");
+pub extern fn isprint(c: c_int) c_int;
 
 /// int isprint_l(int c, locale_t locale);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/isprint_l.html
@@ -1704,7 +1704,7 @@ pub const isprint_l = @compileError("TODO: isprint_l");
 
 /// int ispunct(int c);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/ispunct.html
-pub const ispunct = @compileError("TODO: ispunct");
+pub extern fn ispunct(c: c_int) c_int;
 
 /// int ispunct_l(int c, locale_t locale);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/ispunct_l.html
@@ -1712,7 +1712,7 @@ pub const ispunct_l = @compileError("TODO: ispunct_l");
 
 /// int isspace(int c);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/isspace.html
-pub const isspace = @compileError("TODO: isspace");
+pub extern fn isspace(c: c_int) c_int;
 
 /// int isspace_l(int c, locale_t locale);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/isspace_l.html
@@ -1720,7 +1720,7 @@ pub const isspace_l = @compileError("TODO: isspace_l");
 
 /// int isupper(int c);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/isupper.html
-pub const isupper = @compileError("TODO: isupper");
+pub extern fn isupper(c: c_int) c_int;
 
 /// int isupper_l(int c, locale_t locale);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/isupper_l.html
@@ -1832,7 +1832,7 @@ pub const iswxdigit_l = @compileError("TODO: iswxdigit_l");
 
 /// int isxdigit(int c);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/isxdigit.html
-pub const isxdigit = @compileError("TODO: isxdigit");
+pub extern fn isxdigit(c: c_int) c_int;
 
 /// int isxdigit_l(int c, locale_t locale);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/isxdigit_l.html
@@ -3180,11 +3180,11 @@ pub const putc_unlocked = @compileError("TODO: putc_unlocked");
 
 /// int putchar(int c);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/putchar.html
-pub const putchar = @compileError("TODO: putchar");
+pub extern fn putchar(c: c_int) c_int;
 
 /// int putchar_unlocked(int c);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/putchar_unlocked.html
-pub const putchar_unlocked = @compileError("TODO: putchar_unlocked");
+pub extern fn putchar_unlocked(c: c_int) c_int;
 
 /// int putenv(char *string);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/putenv.html
@@ -4164,11 +4164,11 @@ pub const tmpnam = @compileError("TODO: tmpnam");
 
 /// int toascii(int c);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/toascii.html
-pub const toascii = @compileError("TODO: toascii");
+pub extern fn toascii(c: c_int) c_int;
 
 /// int tolower(int c);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/tolower.html
-pub const tolower = @compileError("TODO: tolower");
+pub extern fn tolower(c: c_int) c_int;
 
 /// int tolower_l(int c, locale_t locale);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/tolower_l.html
@@ -4176,7 +4176,7 @@ pub const tolower_l = @compileError("TODO: tolower_l");
 
 /// int toupper(int c);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/toupper.html
-pub const toupper = @compileError("TODO: toupper");
+pub extern fn toupper(c: c_int) c_int;
 
 /// int toupper_l(int c, locale_t locale);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/toupper_l.html
