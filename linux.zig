@@ -26,14 +26,6 @@ pub extern fn _Exit(status: c_int) noreturn;
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/_exit.html
 pub extern fn _exit(status: c_int) noreturn;
 
-/// void _longjmp(jmp_buf env, int val);
-/// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/_longjmp.html
-pub const _longjmp = @compileError("TODO: _longjmp");
-
-/// int _setjmp(jmp_buf env);
-/// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/_setjmp.html
-pub const _setjmp = @compileError("TODO: _setjmp");
-
 /// long a64l(const char *s);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/a64l.html
 pub const a64l = @compileError("TODO: a64l");
@@ -2042,10 +2034,6 @@ pub extern fn logf(x: f32) f32;
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/logl.html
 pub extern fn logl(x: c_longdouble) c_longdouble;
 
-/// void longjmp(jmp_buf env, int val);
-/// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/longjmp.html
-pub const longjmp = @compileError("TODO: longjmp");
-
 /// long lrand48(void);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/lrand48.html
 pub extern fn lrand48() c_long;
@@ -3558,10 +3546,6 @@ pub const sethostent = @compileError("TODO: sethostent");
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/setitimer.html
 pub const setitimer = @compileError("TODO: setitimer");
 
-/// int setjmp(jmp_buf env);
-/// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/setjmp.html
-pub const setjmp = @compileError("TODO: setjmp");
-
 /// void setkey(const char *key);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/setkey.html
 pub const setkey = @compileError("TODO: setkey");
@@ -3706,10 +3690,6 @@ pub const siginterrupt = @compileError("TODO: siginterrupt");
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/sigismember.html
 pub const sigismember = @compileError("TODO: sigismember");
 
-/// void siglongjmp(sigjmp_buf env, int val);
-/// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/siglongjmp.html
-pub const siglongjmp = @compileError("TODO: siglongjmp");
-
 /// void (*signal(int sig, void (*func)(int)))(int);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/signal.html
 pub const signal = @compileError("TODO: signal");
@@ -3737,10 +3717,6 @@ pub const sigrelse = @compileError("TODO: sigrelse");
 /// void (*sigset(int sig, void (*disp)(int)))(int);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/sigset.html
 pub const sigset = @compileError("TODO: sigset");
-
-/// int sigsetjmp(sigjmp_buf env, int savemask);
-/// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/sigsetjmp.html
-pub const sigsetjmp = @compileError("TODO: sigsetjmp");
 
 /// int sigsuspend(const sigset_t *sigmask);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/sigsuspend.html
