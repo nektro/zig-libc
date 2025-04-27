@@ -56,7 +56,7 @@ pub const access = @compileError("TODO: access");
 
 /// double acos(double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/acos.html
-pub const acos = @compileError("TODO: acos");
+pub extern fn acos(x: f64) f64;
 
 /// float acosf(float x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/acosf.html
@@ -64,7 +64,7 @@ pub const acosf = @compileError("TODO: acosf");
 
 /// double acosh(double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/acosh.html
-pub const acosh = @compileError("TODO: acosh");
+pub extern fn acosh(x: f64) f64;
 
 /// float acoshf(float x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/acoshf.html
@@ -124,7 +124,7 @@ pub const asctime_r = @compileError("TODO: asctime_r");
 
 /// double asin(double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/asin.html
-pub const asin = @compileError("TODO: asin");
+pub extern fn asin(x: f64) f64;
 
 /// float asinf(float x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/asinf.html
@@ -132,7 +132,7 @@ pub const asinf = @compileError("TODO: asinf");
 
 /// double asinh(double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/asinh.html
-pub const asinh = @compileError("TODO: asinh");
+pub extern fn asinh(x: f64) f64;
 
 /// float asinhf(float x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/asinhf.html
@@ -148,7 +148,7 @@ pub const asinl = @compileError("TODO: asinl");
 
 /// double atan(double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/atan.html
-pub const atan = @compileError("TODO: atan");
+pub extern fn atan(x: f64) f64;
 
 /// double atan2(double y, double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/atan2.html
@@ -168,7 +168,7 @@ pub const atanf = @compileError("TODO: atanf");
 
 /// double atanh(double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/atanh.html
-pub const atanh = @compileError("TODO: atanh");
+pub extern fn atanh(x: f64) f64;
 
 /// float atanhf(float x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/atanhf.html
@@ -332,7 +332,7 @@ pub const catopen = @compileError("TODO: catopen");
 
 /// double cbrt(double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/cbrt.html
-pub const cbrt = @compileError("TODO: cbrt");
+pub extern fn cbrt(x: f64) f64;
 
 /// float cbrtf(float x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/cbrtf.html
@@ -368,7 +368,7 @@ pub const ccosl = @compileError("TODO: ccosl");
 
 /// double ceil(double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/ceil.html
-pub const ceil = @compileError("TODO: ceil");
+pub extern fn ceil(x: f64) f64;
 
 /// float ceilf(float x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/ceilf.html
@@ -516,7 +516,7 @@ pub const copysignl = @compileError("TODO: copysignl");
 
 /// double cos(double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/cos.html
-pub const cos = @compileError("TODO: cos");
+pub extern fn cos(x: f64) f64;
 
 /// float cosf(float x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/cosf.html
@@ -524,7 +524,7 @@ pub const cosf = @compileError("TODO: cosf");
 
 /// double cosh(double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/cosh.html
-pub const cosh = @compileError("TODO: cosh");
+pub extern fn cosh(x: f64) f64;
 
 /// float coshf(float x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/coshf.html
@@ -780,11 +780,11 @@ pub const erand48 = @compileError("TODO: erand48");
 
 /// double erf(double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/erf.html
-pub const erf = @compileError("TODO: erf");
+pub extern fn erf(x: f64) f64;
 
 /// double erfc(double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/erfc.html
-pub const erfc = @compileError("TODO: erfc");
+pub extern fn erfc(x: f64) f64;
 
 /// float erfcf(float x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/erfcf.html
@@ -832,11 +832,11 @@ pub extern fn exit(status: c_int) noreturn;
 
 /// double exp(double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/exp.html
-pub const exp = @compileError("TODO: exp");
+pub extern fn exp(x: f64) f64;
 
 /// double exp2(double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/exp2.html
-pub const exp2 = @compileError("TODO: exp2");
+pub extern fn exp2(x: f64) f64;
 
 /// float exp2f(float x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/exp2f.html
@@ -856,7 +856,7 @@ pub const expl = @compileError("TODO: expl");
 
 /// double expm1(double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/expm1.html
-pub const expm1 = @compileError("TODO: expm1");
+pub extern fn expm1(x: f64) f64;
 
 /// float expm1f(float x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/expm1f.html
@@ -868,7 +868,7 @@ pub const expm1l = @compileError("TODO: expm1l");
 
 /// double fabs(double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/fabs.html
-pub const fabs = @compileError("TODO: fabs");
+pub extern fn fabs(x: f64) f64;
 
 /// float fabsf(float x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/fabsf.html
@@ -1036,7 +1036,7 @@ pub const flockfile = @compileError("TODO: flockfile");
 
 /// double floor(double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/floor.html
-pub const floor = @compileError("TODO: floor");
+pub extern fn floor(x: f64) f64;
 
 /// float floorf(float x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/floorf.html
@@ -1588,7 +1588,7 @@ pub const if_nametoindex = @compileError("TODO: if_nametoindex");
 
 /// int ilogb(double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/ilogb.html
-pub const ilogb = @compileError("TODO: ilogb");
+pub extern fn ilogb(x: f64) c_int;
 
 /// int ilogbf(float x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/ilogbf.html
@@ -1848,11 +1848,11 @@ pub const isxdigit_l = @compileError("TODO: isxdigit_l");
 
 /// double j0(double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/j0.html
-pub const j0 = @compileError("TODO: j0");
+pub extern fn j0(x: f64) f64;
 
 /// double j1(double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/j1.html
-pub const j1 = @compileError("TODO: j1");
+pub extern fn j1(x: f64) f64;
 
 /// double jn(int n, double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/jn.html
@@ -1908,7 +1908,7 @@ pub const lfind = @compileError("TODO: lfind");
 
 /// double lgamma(double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/lgamma.html
-pub const lgamma = @compileError("TODO: lgamma");
+pub extern fn lgamma(x: f64) f64;
 
 /// float lgammaf(float x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/lgammaf.html
@@ -1944,7 +1944,7 @@ pub const lldiv = @compileError("TODO: lldiv");
 
 /// long long llrint(double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/llrint.html
-pub const llrint = @compileError("TODO: llrint");
+pub extern fn llrint(x: f64) c_longlong;
 
 /// long long llrintf(float x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/llrintf.html
@@ -1956,7 +1956,7 @@ pub const llrintl = @compileError("TODO: llrintl");
 
 /// long long llround(double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/llround.html
-pub const llround = @compileError("TODO: llround");
+pub extern fn llround(x: f64) c_longlong;
 
 /// long long llroundf(float x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/llroundf.html
@@ -1984,11 +1984,11 @@ pub const lockf = @compileError("TODO: lockf");
 
 /// double log(double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/log.html
-pub const log = @compileError("TODO: log");
+pub extern fn log(x: f64) f64;
 
 /// double log1p(double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/log1p.html
-pub const log1p = @compileError("TODO: log1p");
+pub extern fn log1p(x: f64) f64;
 
 /// float log1pf(float x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/log1pf.html
@@ -2000,7 +2000,7 @@ pub const log1pl = @compileError("TODO: log1pl");
 
 /// double log2(double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/log2.html
-pub const log2 = @compileError("TODO: log2");
+pub extern fn log2(x: f64) f64;
 
 /// float log2f(float x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/log2f.html
@@ -2012,7 +2012,7 @@ pub const log2l = @compileError("TODO: log2l");
 
 /// double log10(double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/log10.html
-pub const log10 = @compileError("TODO: log10");
+pub extern fn log10(x: f64) f64;
 
 /// float log10f(float x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/log10f.html
@@ -2024,7 +2024,7 @@ pub const log10l = @compileError("TODO: log10l");
 
 /// double logb(double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/logb.html
-pub const logb = @compileError("TODO: logb");
+pub extern fn logb(x: f64) f64;
 
 /// float logbf(float x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/logbf.html
@@ -2052,7 +2052,7 @@ pub extern fn lrand48() c_long;
 
 /// long lrint(double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/lrint.html
-pub const lrint = @compileError("TODO: lrint");
+pub extern fn lrint(x: f64) c_long;
 
 /// long lrintf(float x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/lrintf.html
@@ -2064,7 +2064,7 @@ pub const lrintl = @compileError("TODO: lrintl");
 
 /// long lround(double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/lround.html
-pub const lround = @compileError("TODO: lround");
+pub extern fn lround(x: f64) c_long;
 
 /// long lroundf(float x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/lroundf.html
@@ -2304,7 +2304,7 @@ pub const nanosleep = @compileError("TODO: nanosleep");
 
 /// double nearbyint(double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/nearbyint.html
-pub const nearbyint = @compileError("TODO: nearbyint");
+pub extern fn nearbyint(x: f64) f64;
 
 /// float nearbyintf(float x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/nearbyintf.html
@@ -3360,7 +3360,7 @@ pub const rewinddir = @compileError("TODO: rewinddir");
 
 /// double rint(double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/rint.html
-pub const rint = @compileError("TODO: rint");
+pub extern fn rint(x: f64) f64;
 
 /// float rintf(float x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/rintf.html
@@ -3376,7 +3376,7 @@ pub const rmdir = @compileError("TODO: rmdir");
 
 /// double round(double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/round.html
-pub const round = @compileError("TODO: round");
+pub extern fn round(x: f64) f64;
 
 /// float roundf(float x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/roundf.html
@@ -3760,7 +3760,7 @@ pub const sigwaitinfo = @compileError("TODO: sigwaitinfo");
 
 /// double sin(double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/sin.html
-pub const sin = @compileError("TODO: sin");
+pub extern fn sin(x: f64) f64;
 
 /// float sinf(float x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/sinf.html
@@ -3768,7 +3768,7 @@ pub const sinf = @compileError("TODO: sinf");
 
 /// double sinh(double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/sinh.html
-pub const sinh = @compileError("TODO: sinh");
+pub extern fn sinh(x: f64) f64;
 
 /// float sinhf(float x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/sinhf.html
@@ -3808,7 +3808,7 @@ pub const sprintf = @compileError("TODO: sprintf");
 
 /// double sqrt(double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/sqrt.html
-pub const sqrt = @compileError("TODO: sqrt");
+pub extern fn sqrt(x: f64) f64;
 
 /// float sqrtf(float x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/sqrtf.html
@@ -4064,7 +4064,7 @@ pub const system = @compileError("TODO: system");
 
 /// double tan(double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/tan.html
-pub const tan = @compileError("TODO: tan");
+pub extern fn tan(x: f64) f64;
 
 /// float tanf(float x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/tanf.html
@@ -4072,7 +4072,7 @@ pub const tanf = @compileError("TODO: tanf");
 
 /// double tanh(double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/tanh.html
-pub const tanh = @compileError("TODO: tanh");
+pub extern fn tanh(x: f64) f64;
 
 /// float tanhf(float x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/tanhf.html
@@ -4140,7 +4140,7 @@ pub const tfind = @compileError("TODO: tfind");
 
 /// double tgamma(double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/tgamma.html
-pub const tgamma = @compileError("TODO: tgamma");
+pub extern fn tgamma(x: f64) f64;
 
 /// float tgammaf(float x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/tgammaf.html
@@ -4232,7 +4232,7 @@ pub const towupper_l = @compileError("TODO: towupper_l");
 
 /// double trunc(double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/trunc.html
-pub const trunc = @compileError("TODO: trunc");
+pub extern fn trunc(x: f64) f64;
 
 /// int truncate(const char *path, off_t length);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/truncate.html
@@ -4640,11 +4640,11 @@ pub const wscanf = @compileError("TODO: wscanf");
 
 /// double y0(double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/y0.html
-pub const y0 = @compileError("TODO: y0");
+pub extern fn y0(x: f64) f64;
 
 /// double y1(double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/y1.html
-pub const y1 = @compileError("TODO: y1");
+pub extern fn y1(x: f64) f64;
 
 /// double yn(int n, double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/yn.html
