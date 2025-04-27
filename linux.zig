@@ -1729,35 +1729,35 @@ pub extern fn isupper_l(c: c_int, locale: locale_t) c_int;
 
 /// int iswalnum(wint_t wc);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/iswalnum.html
-pub const iswalnum = @compileError("TODO: iswalnum");
+pub extern fn iswalnum(wc: wint_t) c_int;
 
 /// int iswalnum_l(wint_t wc, locale_t locale);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/iswalnum_l.html
-pub const iswalnum_l = @compileError("TODO: iswalnum_l");
+pub extern fn iswalnum_l(wc: wint_t, locale: locale_t) c_int;
 
 /// int iswalpha(wint_t wc);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/iswalpha.html
-pub const iswalpha = @compileError("TODO: iswalpha");
+pub extern fn iswalpha(wc: wint_t) c_int;
 
 /// int iswalpha_l(wint_t wc, locale_t locale);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/iswalpha_l.html
-pub const iswalpha_l = @compileError("TODO: iswalpha_l");
+pub extern fn iswalpha_l(wc: wint_t, locale: locale_t) c_int;
 
 /// int iswblank(wint_t wc);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/iswblank.html
-pub const iswblank = @compileError("TODO: iswblank");
+pub extern fn iswblank(wc: wint_t) c_int;
 
 /// int iswblank_l(wint_t wc, locale_t locale);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/iswblank_l.html
-pub const iswblank_l = @compileError("TODO: iswblank_l");
+pub extern fn iswblank_l(wc: wint_t, locale: locale_t) c_int;
 
 /// int iswcntrl(wint_t wc);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/iswcntrl.html
-pub const iswcntrl = @compileError("TODO: iswcntrl");
+pub extern fn iswcntrl(wc: wint_t) c_int;
 
 /// int iswcntrl_l(wint_t wc, locale_t locale);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/iswcntrl_l.html
-pub const iswcntrl_l = @compileError("TODO: iswcntrl_l");
+pub extern fn iswcntrl_l(wc: wint_t, locale: locale_t) c_int;
 
 /// int iswctype(wint_t wc, wctype_t charclass);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/iswctype.html
@@ -1769,67 +1769,67 @@ pub const iswctype_l = @compileError("TODO: iswctype_l");
 
 /// int iswdigit(wint_t wc);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/iswdigit.html
-pub const iswdigit = @compileError("TODO: iswdigit");
+pub extern fn iswdigit(wc: wint_t) c_int;
 
 /// int iswdigit_l(wint_t wc, locale_t locale);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/iswdigit_l.html
-pub const iswdigit_l = @compileError("TODO: iswdigit_l");
+pub extern fn iswdigit_l(wc: wint_t, locale: locale_t) c_int;
 
 /// int iswgraph(wint_t wc);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/iswgraph.html
-pub const iswgraph = @compileError("TODO: iswgraph");
+pub extern fn iswgraph(wc: wint_t) c_int;
 
 /// int iswgraph_l(wint_t wc, locale_t locale);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/iswgraph_l.html
-pub const iswgraph_l = @compileError("TODO: iswgraph_l");
+pub extern fn iswgraph_l(wc: wint_t, locale: locale_t) c_int;
 
 /// int iswlower(wint_t wc);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/iswlower.html
-pub const iswlower = @compileError("TODO: iswlower");
+pub extern fn iswlower(wc: wint_t) c_int;
 
 /// int iswlower_l(wint_t wc, locale_t locale);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/iswlower_l.html
-pub const iswlower_l = @compileError("TODO: iswlower_l");
+pub extern fn iswlower_l(wc: wint_t, locale: locale_t) c_int;
 
 /// int iswprint(wint_t wc);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/iswprint.html
-pub const iswprint = @compileError("TODO: iswprint");
+pub extern fn iswprint(wc: wint_t) c_int;
 
 /// int iswprint_l(wint_t wc, locale_t locale);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/iswprint_l.html
-pub const iswprint_l = @compileError("TODO: iswprint_l");
+pub extern fn iswprint_l(wc: wint_t, locale: locale_t) c_int;
 
 /// int iswpunct(wint_t wc);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/iswpunct.html
-pub const iswpunct = @compileError("TODO: iswpunct");
+pub extern fn iswpunct(wc: wint_t) c_int;
 
 /// int iswpunct_l(wint_t wc, locale_t locale);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/iswpunct_l.html
-pub const iswpunct_l = @compileError("TODO: iswpunct_l");
+pub extern fn iswpunct_l(wc: wint_t, locale: locale_t) c_int;
 
 /// int iswspace(wint_t wc);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/iswspace.html
-pub const iswspace = @compileError("TODO: iswspace");
+pub extern fn iswspace(wc: wint_t) c_int;
 
 /// int iswspace_l(wint_t wc, locale_t locale);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/iswspace_l.html
-pub const iswspace_l = @compileError("TODO: iswspace_l");
+pub extern fn iswspace_l(wc: wint_t, locale: locale_t) c_int;
 
 /// int iswupper(wint_t wc);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/iswupper.html
-pub const iswupper = @compileError("TODO: iswupper");
+pub extern fn iswupper(wc: wint_t) c_int;
 
 /// int iswupper_l(wint_t wc, locale_t locale);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/iswupper_l.html
-pub const iswupper_l = @compileError("TODO: iswupper_l");
+pub extern fn iswupper_l(wc: wint_t, locale: locale_t) c_int;
 
 /// int iswxdigit(wint_t wc);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/iswxdigit.html
-pub const iswxdigit = @compileError("TODO: iswxdigit");
+pub extern fn iswxdigit(wc: wint_t) c_int;
 
 /// int iswxdigit_l(wint_t wc, locale_t locale);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/iswxdigit_l.html
-pub const iswxdigit_l = @compileError("TODO: iswxdigit_l");
+pub extern fn iswxdigit_l(wc: wint_t, locale: locale_t) c_int;
 
 /// int isxdigit(int c);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/isxdigit.html
@@ -4193,19 +4193,19 @@ pub const towctrans_l = @compileError("TODO: towctrans_l");
 
 /// wint_t towlower(wint_t wc);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/towlower.html
-pub const towlower = @compileError("TODO: towlower");
+pub extern fn towlower(wc: wint_t) wint_t;
 
 /// wint_t towlower_l(wint_t wc, locale_t locale);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/towlower_l.html
-pub const towlower_l = @compileError("TODO: towlower_l");
+pub extern fn towlower_l(wc: wint_t, locale: locale_t) wint_t;
 
 /// wint_t towupper(wint_t wc);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/towupper.html
-pub const towupper = @compileError("TODO: towupper");
+pub extern fn towupper(wc: wint_t) wint_t;
 
 /// wint_t towupper_l(wint_t wc, locale_t locale);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/towupper_l.html
-pub const towupper_l = @compileError("TODO: towupper_l");
+pub extern fn towupper_l(wc: wint_t, locale: locale_t) wint_t;
 
 /// double trunc(double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/trunc.html
