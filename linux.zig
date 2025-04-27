@@ -1109,7 +1109,7 @@ pub extern fn fork() pid_t;
 
 /// long fpathconf(int fildes, int name);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/fpathconf.html
-pub const fpathconf = @compileError("TODO: fpathconf");
+pub extern fn fpathconf(fildes: c_int, name: c_int) c_long;
 
 /// int fprintf(FILE *restrict stream, const char *restrict format, ...);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/fprintf.html
@@ -1849,7 +1849,7 @@ pub extern fn j1(x: f64) f64;
 
 /// double jn(int n, double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/jn.html
-pub const jn = @compileError("TODO: jn");
+pub extern fn jn(n: c_int, x: f64) f64;
 
 /// long jrand48(unsigned short xsubi[3]);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/jrand48.html
@@ -1881,11 +1881,11 @@ pub const lcong48 = @compileError("TODO: lcong48");
 
 /// double ldexp(double x, int exp);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/ldexp.html
-pub const ldexp = @compileError("TODO: ldexp");
+pub extern fn ldexp(x: f64, exp: c_int) f64;
 
 /// float ldexpf(float x, int exp);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/ldexpf.html
-pub const ldexpf = @compileError("TODO: ldexpf");
+pub extern fn ldexpf(x: f32, exp: c_int) f32;
 
 /// long double ldexpl(long double x, int exp);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/ldexpl.html
@@ -1925,7 +1925,7 @@ pub const lio_listio = @compileError("TODO: lio_listio");
 
 /// int listen(int socket, int backlog);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/listen.html
-pub const listen = @compileError("TODO: listen");
+pub extern fn listen(socket: c_int, backlog: c_int) c_int;
 
 /// long long llabs(long long i);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/llabs.html
@@ -3377,11 +3377,11 @@ pub extern fn roundl(x: c_longdouble) c_longdouble;
 
 /// double scalbln(double x, long n);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/scalbln.html
-pub const scalbln = @compileError("TODO: scalbln");
+pub extern fn scalbln(x: f64, n: c_long) f64;
 
 /// float scalblnf(float x, long n);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/scalblnf.html
-pub const scalblnf = @compileError("TODO: scalblnf");
+pub extern fn scalblnf(x: f32, n: c_long) f32;
 
 /// long double scalblnl(long double x, long n);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/scalblnl.html
@@ -3389,11 +3389,11 @@ pub const scalblnl = @compileError("TODO: scalblnl");
 
 /// double scalbn(double x, int n);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/scalbn.html
-pub const scalbn = @compileError("TODO: scalbn");
+pub extern fn scalbn(x: f64, n: c_int) f64;
 
 /// float scalbnf(float x, int n);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/scalbnf.html
-pub const scalbnf = @compileError("TODO: scalbnf");
+pub extern fn scalbnf(x: f32, n: c_int) f32;
 
 /// long double scalbnl(long double x, int n);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/scalbnl.html
@@ -3649,7 +3649,7 @@ pub const shmget = @compileError("TODO: shmget");
 
 /// int shutdown(int socket, int how);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/shutdown.html
-pub const shutdown = @compileError("TODO: shutdown");
+pub extern fn shutdown(socket: c_int, how: c_int) c_int;
 
 /// int sigaction(int sig, const struct sigaction *restrict act, struct sigaction *restrict oact);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/sigaction.html
@@ -3685,7 +3685,7 @@ pub const sigignore = @compileError("TODO: sigignore");
 
 /// int siginterrupt(int sig, int flag);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/siginterrupt.html
-pub const siginterrupt = @compileError("TODO: siginterrupt");
+pub extern fn siginterrupt(sig: c_int, flag: c_int) c_int;
 
 /// int sigismember(const sigset_t *set, int signo);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/sigismember.html
@@ -4069,7 +4069,7 @@ pub const tcdrain = @compileError("TODO: tcdrain");
 
 /// int tcflow(int fildes, int action);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/tcflow.html
-pub const tcflow = @compileError("TODO: tcflow");
+pub extern fn tcflow(fildes: c_int, action: c_int) c_int;
 
 /// int tcflush(int fildes, int queue_selector);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/tcflush.html
@@ -4089,7 +4089,7 @@ pub const tcgetsid = @compileError("TODO: tcgetsid");
 
 /// int tcsendbreak(int fildes, int duration);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/tcsendbreak.html
-pub const tcsendbreak = @compileError("TODO: tcsendbreak");
+pub extern fn tcsendbreak(fildes: c_int, duration: c_int) c_int;
 
 /// int tcsetattr(int fildes, int optional_actions, const struct termios *termios_p);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/tcsetattr.html
@@ -4625,4 +4625,4 @@ pub extern fn y1(x: f64) f64;
 
 /// double yn(int n, double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/yn.html
-pub const yn = @compileError("TODO: yn");
+pub extern fn yn(n: c_int, x: f64) f64;
