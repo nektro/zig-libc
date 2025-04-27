@@ -17,6 +17,7 @@ pub const struct_if_nameindex = opaque {};
 pub const struct_lconv = opaque {};
 pub const pthread_t = c_ulong;
 pub const FILE = opaque {};
+pub const locale_t = *const opaque {};
 
 /// void _Exit(int status);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/_Exit.html
@@ -1632,7 +1633,7 @@ pub extern fn isalnum(c: c_int) c_int;
 
 /// int isalnum_l(int c, locale_t locale);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/isalnum_l.html
-pub const isalnum_l = @compileError("TODO: isalnum_l");
+pub extern fn isalnum_l(c: c_int, locale: locale_t) c_int;
 
 /// int isalpha(int c);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/isalpha.html
@@ -1640,7 +1641,7 @@ pub extern fn isalpha(c: c_int) c_int;
 
 /// int isalpha_l(int c, locale_t locale);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/isalpha_l.html
-pub const isalpha_l = @compileError("TODO: isalpha_l");
+pub extern fn isalpha_l(c: c_int, locale: locale_t) c_int;
 
 /// int isascii(int c);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/isascii.html
@@ -1660,7 +1661,7 @@ pub extern fn isblank(c: c_int) c_int;
 
 /// int isblank_l(int c, locale_t locale);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/isblank_l.html
-pub const isblank_l = @compileError("TODO: isblank_l");
+pub extern fn isblank_l(c: c_int, locale: locale_t) c_int;
 
 /// int iscntrl(int c);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/iscntrl.html
@@ -1668,7 +1669,7 @@ pub extern fn iscntrl(c: c_int) c_int;
 
 /// int iscntrl_l(int c, locale_t locale);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/iscntrl_l.html
-pub const iscntrl_l = @compileError("TODO: iscntrl_l");
+pub extern fn iscntrl_l(c: c_int, locale: locale_t) c_int;
 
 /// int isdigit(int c);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/isdigit.html
@@ -1676,7 +1677,7 @@ pub extern fn isdigit(c: c_int) c_int;
 
 /// int isdigit_l(int c, locale_t locale);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/isdigit_l.html
-pub const isdigit_l = @compileError("TODO: isdigit_l");
+pub extern fn isdigit_l(c: c_int, locale: locale_t) c_int;
 
 /// int isgraph(int c);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/isgraph.html
@@ -1684,7 +1685,7 @@ pub extern fn isgraph(c: c_int) c_int;
 
 /// int isgraph_l(int c, locale_t locale);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/isgraph_l.html
-pub const isgraph_l = @compileError("TODO: isgraph_l");
+pub extern fn isgraph_l(c: c_int, locale: locale_t) c_int;
 
 /// int islower(int c);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/islower.html
@@ -1692,7 +1693,7 @@ pub extern fn islower(c: c_int) c_int;
 
 /// int islower_l(int c, locale_t locale);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/islower_l.html
-pub const islower_l = @compileError("TODO: islower_l");
+pub extern fn islower_l(c: c_int, locale: locale_t) c_int;
 
 /// int isprint(int c);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/isprint.html
@@ -1700,7 +1701,7 @@ pub extern fn isprint(c: c_int) c_int;
 
 /// int isprint_l(int c, locale_t locale);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/isprint_l.html
-pub const isprint_l = @compileError("TODO: isprint_l");
+pub extern fn isprint_l(c: c_int, locale: locale_t) c_int;
 
 /// int ispunct(int c);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/ispunct.html
@@ -1708,7 +1709,7 @@ pub extern fn ispunct(c: c_int) c_int;
 
 /// int ispunct_l(int c, locale_t locale);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/ispunct_l.html
-pub const ispunct_l = @compileError("TODO: ispunct_l");
+pub extern fn ispunct_l(c: c_int, locale: locale_t) c_int;
 
 /// int isspace(int c);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/isspace.html
@@ -1716,7 +1717,7 @@ pub extern fn isspace(c: c_int) c_int;
 
 /// int isspace_l(int c, locale_t locale);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/isspace_l.html
-pub const isspace_l = @compileError("TODO: isspace_l");
+pub extern fn isspace_l(c: c_int, locale: locale_t) c_int;
 
 /// int isupper(int c);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/isupper.html
@@ -1724,7 +1725,7 @@ pub extern fn isupper(c: c_int) c_int;
 
 /// int isupper_l(int c, locale_t locale);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/isupper_l.html
-pub const isupper_l = @compileError("TODO: isupper_l");
+pub extern fn isupper_l(c: c_int, locale: locale_t) c_int;
 
 /// int iswalnum(wint_t wc);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/iswalnum.html
@@ -1836,7 +1837,7 @@ pub extern fn isxdigit(c: c_int) c_int;
 
 /// int isxdigit_l(int c, locale_t locale);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/isxdigit_l.html
-pub const isxdigit_l = @compileError("TODO: isxdigit_l");
+pub extern fn isxdigit_l(c: c_int, locale: locale_t) c_int;
 
 /// double j0(double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/j0.html
@@ -4172,7 +4173,7 @@ pub extern fn tolower(c: c_int) c_int;
 
 /// int tolower_l(int c, locale_t locale);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/tolower_l.html
-pub const tolower_l = @compileError("TODO: tolower_l");
+pub extern fn tolower_l(c: c_int, locale: locale_t) c_int;
 
 /// int toupper(int c);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/toupper.html
@@ -4180,7 +4181,7 @@ pub extern fn toupper(c: c_int) c_int;
 
 /// int toupper_l(int c, locale_t locale);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/toupper_l.html
-pub const toupper_l = @compileError("TODO: toupper_l");
+pub extern fn toupper_l(c: c_int, locale: locale_t) c_int;
 
 /// wint_t towctrans(wint_t wc, wctrans_t desc);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/towctrans.html
