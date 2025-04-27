@@ -500,7 +500,7 @@ pub extern fn copysign(x: f64, y: f64) f64;
 
 /// float copysignf(float x, float y);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/copysignf.html
-pub const copysignf = @compileError("TODO: copysignf");
+pub extern fn copysignf(x: f32, y: f32) f32;
 
 /// long double copysignl(long double x, long double y);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/copysignl.html
@@ -920,7 +920,7 @@ pub extern fn fdim(x: f64, y: f64) f64;
 
 /// float fdimf(float x, float y);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/fdimf.html
-pub const fdimf = @compileError("TODO: fdimf");
+pub extern fn fdimf(x: f32, y: f32) f32;
 
 /// long double fdiml(long double x, long double y);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/fdiml.html
@@ -1056,7 +1056,7 @@ pub extern fn fmax(x: f64, y: f64) f64;
 
 /// float fmaxf(float x, float y);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/fmaxf.html
-pub const fmaxf = @compileError("TODO: fmaxf");
+pub extern fn fmaxf(x: f32, y: f32) f32;
 
 /// long double fmaxl(long double x, long double y);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/fmaxl.html
@@ -1072,7 +1072,7 @@ pub extern fn fmin(x: f64, y: f64) f64;
 
 /// float fminf(float x, float y);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/fminf.html
-pub const fminf = @compileError("TODO: fminf");
+pub extern fn fminf(x: f32, y: f32) f32;
 
 /// long double fminl(long double x, long double y);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/fminl.html
@@ -1084,7 +1084,7 @@ pub extern fn fmod(x: f64, y: f64) f64;
 
 /// float fmodf(float x, float y);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/fmodf.html
-pub const fmodf = @compileError("TODO: fmodf");
+pub extern fn fmodf(x: f32, y: f32) f32;
 
 /// long double fmodl(long double x, long double y);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/fmodl.html
@@ -1544,7 +1544,7 @@ pub extern fn hypot(x: f64, y: f64) f64;
 
 /// float hypotf(float x, float y);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/hypotf.html
-pub const hypotf = @compileError("TODO: hypotf");
+pub extern fn hypotf(x: f32, y: f32) f32;
 
 /// long double hypotl(long double x, long double y);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/hypotl.html
@@ -2312,7 +2312,7 @@ pub extern fn nextafter(x: f64, y: f64) f64;
 
 /// float nextafterf(float x, float y);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/nextafterf.html
-pub const nextafterf = @compileError("TODO: nextafterf");
+pub extern fn nextafterf(x: f32, y: f32) f32;
 
 /// long double nextafterl(long double x, long double y);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/nextafterl.html
@@ -2732,7 +2732,7 @@ pub extern fn pow(x: f64, y: f64) f64;
 
 /// float powf(float x, float y);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/powf.html
-pub const powf = @compileError("TODO: powf");
+pub extern fn powf(x: f32, y: f32) f32;
 
 /// long double powl(long double x, long double y);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/powl.html
@@ -3304,7 +3304,7 @@ pub extern fn remainder(x: f64, y: f64) f64;
 
 /// float remainderf(float x, float y);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/remainderf.html
-pub const remainderf = @compileError("TODO: remainderf");
+pub extern fn remainderf(x: f32, y: f32) f32;
 
 /// long double remainderl(long double x, long double y);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/remainderl.html
