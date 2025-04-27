@@ -20,11 +20,11 @@ pub const FILE = opaque {};
 
 /// void _Exit(int status);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/_Exit.html
-pub const _Exit = @compileError("TODO: _Exit");
+pub extern fn _Exit(status: c_int) noreturn;
 
 /// void _exit(int status);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/_exit.html
-pub const _exit = @compileError("TODO: _exit");
+pub extern fn _exit(status: c_int) noreturn;
 
 /// void _longjmp(jmp_buf env, int val);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/_longjmp.html
@@ -828,7 +828,7 @@ pub const execvp = @compileError("TODO: execvp");
 
 /// void exit(int status);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/exit.html
-pub const exit = @compileError("TODO: exit");
+pub extern fn exit(status: c_int) noreturn;
 
 /// double exp(double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/exp.html
