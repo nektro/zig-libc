@@ -72,11 +72,11 @@ pub extern fn acoshf(x: f32) f32;
 
 /// long double acoshl(long double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/acoshl.html
-pub const acoshl = @compileError("TODO: acoshl");
+pub extern fn acoshl(x: c_longdouble) c_longdouble;
 
 /// long double acosl(long double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/acosl.html
-pub const acosl = @compileError("TODO: acosl");
+pub extern fn acosl(x: c_longdouble) c_longdouble;
 
 /// int aio_cancel(int fildes, struct aiocb *aiocbp);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/aio_cancel.html
@@ -140,11 +140,11 @@ pub extern fn asinhf(x: f32) f32;
 
 /// long double asinhl(long double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/asinhl.html
-pub const asinhl = @compileError("TODO: asinhl");
+pub extern fn asinhl(x: c_longdouble) c_longdouble;
 
 /// long double asinl(long double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/asinl.html
-pub const asinl = @compileError("TODO: asinl");
+pub extern fn asinl(x: c_longdouble) c_longdouble;
 
 /// double atan(double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/atan.html
@@ -176,11 +176,11 @@ pub extern fn atanhf(x: f32) f32;
 
 /// long double atanhl(long double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/atanhl.html
-pub const atanhl = @compileError("TODO: atanhl");
+pub extern fn atanhl(x: c_longdouble) c_longdouble;
 
 /// long double atanl(long double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/atanl.html
-pub const atanl = @compileError("TODO: atanl");
+pub extern fn atanl(x: c_longdouble) c_longdouble;
 
 /// int atexit(void (*func)(void));
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/atexit.html
@@ -340,7 +340,7 @@ pub extern fn cbrtf(x: f32) f32;
 
 /// long double cbrtl(long double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/cbrtl.html
-pub const cbrtl = @compileError("TODO: cbrtl");
+pub extern fn cbrtl(x: c_longdouble) c_longdouble;
 
 /// double complex ccos(double complex z);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/ccos.html
@@ -376,7 +376,7 @@ pub extern fn ceilf(x: f32) f32;
 
 /// long double ceill(long double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/ceill.html
-pub const ceill = @compileError("TODO: ceill");
+pub extern fn ceill(x: c_longdouble) c_longdouble;
 
 /// double complex cexp(double complex z);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/cexp.html
@@ -532,11 +532,11 @@ pub extern fn coshf(x: f32) f32;
 
 /// long double coshl(long double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/coshl.html
-pub const coshl = @compileError("TODO: coshl");
+pub extern fn coshl(x: c_longdouble) c_longdouble;
 
 /// long double cosl(long double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/cosl.html
-pub const cosl = @compileError("TODO: cosl");
+pub extern fn cosl(x: c_longdouble) c_longdouble;
 
 /// double complex cpow(double complex x, double complex y);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/cpow.html
@@ -792,7 +792,7 @@ pub extern fn erfcf(x: f32) f32;
 
 /// long double erfcl(long double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/erfcl.html
-pub const erfcl = @compileError("TODO: erfcl");
+pub extern fn erfcl(x: c_longdouble) c_longdouble;
 
 /// float erff(float x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/erff.html
@@ -800,7 +800,7 @@ pub extern fn erff(x: f32) f32;
 
 /// long double erfl(long double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/erfl.html
-pub const erfl = @compileError("TODO: erfl");
+pub extern fn erfl(x: c_longdouble) c_longdouble;
 
 /// int execl(const char *path, const char *arg0, ... /*, (char *)0 */);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/execl.html
@@ -844,7 +844,7 @@ pub extern fn exp2f(x: f32) f32;
 
 /// long double exp2l(long double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/exp2l.html
-pub const exp2l = @compileError("TODO: exp2l");
+pub extern fn exp2l(x: c_longdouble) c_longdouble;
 
 /// float expf(float x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/expf.html
@@ -852,7 +852,7 @@ pub extern fn expf(x: f32) f32;
 
 /// long double expl(long double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/expl.html
-pub const expl = @compileError("TODO: expl");
+pub extern fn expl(x: c_longdouble) c_longdouble;
 
 /// double expm1(double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/expm1.html
@@ -864,7 +864,7 @@ pub extern fn expm1f(x: f32) f32;
 
 /// long double expm1l(long double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/expm1l.html
-pub const expm1l = @compileError("TODO: expm1l");
+pub extern fn expm1l(x: c_longdouble) c_longdouble;
 
 /// double fabs(double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/fabs.html
@@ -876,7 +876,7 @@ pub extern fn fabsf(x: f32) f32;
 
 /// long double fabsl(long double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/fabsl.html
-pub const fabsl = @compileError("TODO: fabsl");
+pub extern fn fabsl(x: c_longdouble) c_longdouble;
 
 /// int faccessat(int fd, const char *path, int amode, int flag);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/faccessat.html
@@ -1044,7 +1044,7 @@ pub extern fn floorf(x: f32) f32;
 
 /// long double floorl(long double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/floorl.html
-pub const floorl = @compileError("TODO: floorl");
+pub extern fn floorl(x: c_longdouble) c_longdouble;
 
 /// double fma(double x, double y, double z);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/fma.html
@@ -1596,7 +1596,7 @@ pub extern fn ilogbf(x: f32) c_int;
 
 /// int ilogbl(long double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/ilogbl.html
-pub const ilogbl = @compileError("TODO: ilogbl");
+pub extern fn ilogbl(x: c_longdouble) c_int;
 
 /// intmax_t imaxabs(intmax_t j);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/imaxabs.html
@@ -1916,7 +1916,7 @@ pub extern fn lgammaf(x: f32) f32;
 
 /// long double lgammal(long double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/lgammal.html
-pub const lgammal = @compileError("TODO: lgammal");
+pub extern fn lgammal(x: c_longdouble) c_longdouble;
 
 /// int link(const char *path1, const char *path2);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/link.html
@@ -1952,7 +1952,7 @@ pub extern fn llrintf(x: f32) c_longlong;
 
 /// long long llrintl(long double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/llrintl.html
-pub const llrintl = @compileError("TODO: llrintl");
+pub extern fn llrintl(x: c_longdouble) c_longlong;
 
 /// long long llround(double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/llround.html
@@ -1964,7 +1964,7 @@ pub extern fn llroundf(x: f32) c_longlong;
 
 /// long long llroundl(long double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/llroundl.html
-pub const llroundl = @compileError("TODO: llroundl");
+pub extern fn llroundl(x: c_longdouble) c_longlong;
 
 /// struct lconv *localeconv(void);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/localeconv.html
@@ -1996,7 +1996,7 @@ pub extern fn log1pf(x: f32) f32;
 
 /// long double log1pl(long double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/log1pl.html
-pub const log1pl = @compileError("TODO: log1pl");
+pub extern fn log1pl(x: c_longdouble) c_longdouble;
 
 /// double log2(double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/log2.html
@@ -2008,7 +2008,7 @@ pub extern fn log2f(x: f32) f32;
 
 /// long double log2l(long double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/log2l.html
-pub const log2l = @compileError("TODO: log2l");
+pub extern fn log2l(x: c_longdouble) c_longdouble;
 
 /// double log10(double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/log10.html
@@ -2020,7 +2020,7 @@ pub extern fn log10f(x: f32) f32;
 
 /// long double log10l(long double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/log10l.html
-pub const log10l = @compileError("TODO: log10l");
+pub extern fn log10l(x: c_longdouble) c_longdouble;
 
 /// double logb(double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/logb.html
@@ -2032,7 +2032,7 @@ pub extern fn logbf(x: f32) f32;
 
 /// long double logbl(long double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/logbl.html
-pub const logbl = @compileError("TODO: logbl");
+pub extern fn logbl(x: c_longdouble) c_longdouble;
 
 /// float logf(float x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/logf.html
@@ -2040,7 +2040,7 @@ pub extern fn logf(x: f32) f32;
 
 /// long double logl(long double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/logl.html
-pub const logl = @compileError("TODO: logl");
+pub extern fn logl(x: c_longdouble) c_longdouble;
 
 /// void longjmp(jmp_buf env, int val);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/longjmp.html
@@ -2060,7 +2060,7 @@ pub extern fn lrintf(x: f32) c_long;
 
 /// long lrintl(long double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/lrintl.html
-pub const lrintl = @compileError("TODO: lrintl");
+pub extern fn lrintl(x: c_longdouble) c_long;
 
 /// long lround(double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/lround.html
@@ -2072,7 +2072,7 @@ pub extern fn lroundf(x: f32) c_long;
 
 /// long lroundl(long double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/lroundl.html
-pub const lroundl = @compileError("TODO: lroundl");
+pub extern fn lroundl(x: c_longdouble) c_long;
 
 /// void *lsearch(const void *key, void *base, size_t *nelp, size_t width, int (*compar)(const void *, const void *));
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/lsearch.html
@@ -2312,7 +2312,7 @@ pub extern fn nearbyintf(x: f32) f32;
 
 /// long double nearbyintl(long double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/nearbyintl.html
-pub const nearbyintl = @compileError("TODO: nearbyintl");
+pub extern fn nearbyintl(x: c_longdouble) c_longdouble;
 
 /// locale_t newlocale(int category_mask, const char *locale, locale_t base);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/newlocale.html
@@ -3368,7 +3368,7 @@ pub extern fn rintf(x: f32) f32;
 
 /// long double rintl(long double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/rintl.html
-pub const rintl = @compileError("TODO: rintl");
+pub extern fn rintl(x: c_longdouble) c_longdouble;
 
 /// int rmdir(const char *path);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/rmdir.html
@@ -3384,7 +3384,7 @@ pub extern fn roundf(x: f32) f32;
 
 /// long double roundl(long double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/roundl.html
-pub const roundl = @compileError("TODO: roundl");
+pub extern fn roundl(x: c_longdouble) c_longdouble;
 
 /// double scalbln(double x, long n);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/scalbln.html
@@ -3776,11 +3776,11 @@ pub extern fn sinhf(x: f32) f32;
 
 /// long double sinhl(long double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/sinhl.html
-pub const sinhl = @compileError("TODO: sinhl");
+pub extern fn sinhl(x: c_longdouble) c_longdouble;
 
 /// long double sinl(long double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/sinl.html
-pub const sinl = @compileError("TODO: sinl");
+pub extern fn sinl(x: c_longdouble) c_longdouble;
 
 /// unsigned sleep(unsigned seconds);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/sleep.html
@@ -3816,7 +3816,7 @@ pub extern fn sqrtf(x: f32) f32;
 
 /// long double sqrtl(long double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/sqrtl.html
-pub const sqrtl = @compileError("TODO: sqrtl");
+pub extern fn sqrtl(x: c_longdouble) c_longdouble;
 
 /// void srand(unsigned seed);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/srand.html
@@ -4080,11 +4080,11 @@ pub extern fn tanhf(x: f32) f32;
 
 /// long double tanhl(long double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/tanhl.html
-pub const tanhl = @compileError("TODO: tanhl");
+pub extern fn tanhl(x: c_longdouble) c_longdouble;
 
 /// long double tanl(long double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/tanl.html
-pub const tanl = @compileError("TODO: tanl");
+pub extern fn tanl(x: c_longdouble) c_longdouble;
 
 /// int tcdrain(int fildes);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/tcdrain.html
@@ -4148,7 +4148,7 @@ pub extern fn tgammaf(x: f32) f32;
 
 /// long double tgammal(long double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/tgammal.html
-pub const tgammal = @compileError("TODO: tgammal");
+pub extern fn tgammal(x: c_longdouble) c_longdouble;
 
 /// time_t time(time_t *tloc);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/time.html
@@ -4244,7 +4244,7 @@ pub extern fn truncf(x: f32) f32;
 
 /// long double truncl(long double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/truncl.html
-pub const truncl = @compileError("TODO: truncl");
+pub extern fn truncl(x: c_longdouble) c_longdouble;
 
 /// void *tsearch(const void *key, void **rootp, int (*compar)(const void *, const void *));
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/tsearch.html
