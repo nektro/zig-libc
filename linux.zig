@@ -1376,7 +1376,7 @@ pub const getpeername = @compileError("TODO: getpeername");
 
 /// pid_t getpgid(pid_t pid);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/getpgid.html
-pub const getpgid = @compileError("TODO: getpgid");
+pub extern fn getpgid(pid: pid_t) pid_t;
 
 /// pid_t getpgrp(void);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/getpgrp.html
@@ -1440,7 +1440,7 @@ pub const getrusage = @compileError("TODO: getrusage");
 
 /// char *gets(char *s);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/gets.html
-pub const gets = @compileError("TODO: gets");
+pub extern fn gets(s: [*]u8) [*:0]u8;
 
 /// struct servent *getservbyname(const char *name, const char *proto);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/getservbyname.html
@@ -1456,7 +1456,7 @@ pub extern fn getservent() ?*struct_servent;
 
 /// pid_t getsid(pid_t pid);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/getsid.html
-pub const getsid = @compileError("TODO: getsid");
+pub extern fn getsid(pid: pid_t) pid_t;
 
 /// int getsockname(int socket, struct sockaddr *restrict address, socklen_t *restrict address_len);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/getsockname.html
@@ -3420,7 +3420,7 @@ pub const sched_getparam = @compileError("TODO: sched_getparam");
 
 /// int sched_getscheduler(pid_t pid);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/sched_getscheduler.html
-pub const sched_getscheduler = @compileError("TODO: sched_getscheduler");
+pub extern fn sched_getscheduler(pid: pid_t) c_int;
 
 /// int sched_rr_get_interval(pid_t pid, struct timespec *interval);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/sched_rr_get_interval.html
