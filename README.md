@@ -26,7 +26,13 @@ pub extern "c" fn linkat(oldfd: c.fd_t, oldpath: [*:0]const u8, newfd: c.fd_t, n
 Now that's more like it!
 
 This project exists to provide an exhaustive selection of crafted and type-safe definitions for system C functions that may or may not be in the standard library.
-For Windows, you may be interested in https://github.com/marlersoft/zigwin32 as it is made in much the same spirit.
+
+## Supported Targets
+
+- [x] Linux
+- [x] Windows (See https://github.com/marlersoft/zigwin32)
+- [ ] macOS (coming soon)
+- [ ] others planned!
 
 ## Built With
 
