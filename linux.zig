@@ -22,6 +22,8 @@ pub const nl_catd = *const opaque {};
 pub const intmax_t = i64;
 pub const wchar_t = c_int;
 pub const mode_t = c_uint;
+pub const struct_sockaddr = linux.sockaddr;
+pub const socklen_t = c_uint;
 
 /// void _Exit(int status);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/_Exit.html
@@ -33,7 +35,7 @@ pub extern fn _exit(status: c_int) noreturn;
 
 /// long a64l(const char *s);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/a64l.html
-pub const a64l = @compileError("TODO: a64l");
+pub extern fn a64l(s: [*]const u8) c_long;
 
 /// void abort(void);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/abort.html
@@ -45,11 +47,11 @@ pub extern fn abs(i: c_int) c_int;
 
 /// int accept(int socket, struct sockaddr *restrict address, socklen_t *restrict address_len);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/accept.html
-pub const accept = @compileError("TODO: accept");
+pub extern fn accept(socket: c_int, noalias address: ?*struct_sockaddr, noalias address_len: *socklen_t) c_int;
 
 /// int access(const char *path, int amode);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/access.html
-pub const access = @compileError("TODO: access");
+pub extern fn access(path: [*:0]const u8, amode: c_int) c_int;
 
 /// double acos(double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/acos.html
