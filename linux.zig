@@ -504,7 +504,7 @@ pub extern fn copysignf(x: f32, y: f32) f32;
 
 /// long double copysignl(long double x, long double y);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/copysignl.html
-pub const copysignl = @compileError("TODO: copysignl");
+pub extern fn copysignl(x: c_longdouble, y: c_longdouble) c_longdouble;
 
 /// double cos(double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/cos.html
@@ -924,7 +924,7 @@ pub extern fn fdimf(x: f32, y: f32) f32;
 
 /// long double fdiml(long double x, long double y);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/fdiml.html
-pub const fdiml = @compileError("TODO: fdiml");
+pub extern fn fdiml(x: c_longdouble, y: c_longdouble) c_longdouble;
 
 /// FILE *fdopen(int fildes, const char *mode);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/fdopen.html
@@ -1060,7 +1060,7 @@ pub extern fn fmaxf(x: f32, y: f32) f32;
 
 /// long double fmaxl(long double x, long double y);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/fmaxl.html
-pub const fmaxl = @compileError("TODO: fmaxl");
+pub extern fn fmaxl(x: c_longdouble, y: c_longdouble) c_longdouble;
 
 /// FILE *fmemopen(void *restrict buf, size_t size, const char *restrict mode);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/fmemopen.html
@@ -1076,7 +1076,7 @@ pub extern fn fminf(x: f32, y: f32) f32;
 
 /// long double fminl(long double x, long double y);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/fminl.html
-pub const fminl = @compileError("TODO: fminl");
+pub extern fn fminl(x: c_longdouble, y: c_longdouble) c_longdouble;
 
 /// double fmod(double x, double y);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/fmod.html
@@ -1088,7 +1088,7 @@ pub extern fn fmodf(x: f32, y: f32) f32;
 
 /// long double fmodl(long double x, long double y);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/fmodl.html
-pub const fmodl = @compileError("TODO: fmodl");
+pub extern fn fmodl(x: c_longdouble, y: c_longdouble) c_longdouble;
 
 /// int fmtmsg(long classification, const char *label, int severity, const char *text, const char *action, const char *tag);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/fmtmsg.html
@@ -1548,7 +1548,7 @@ pub extern fn hypotf(x: f32, y: f32) f32;
 
 /// long double hypotl(long double x, long double y);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/hypotl.html
-pub const hypotl = @compileError("TODO: hypotl");
+pub extern fn hypotl(x: c_longdouble, y: c_longdouble) c_longdouble;
 
 /// size_t iconv(iconv_t cd, char **restrict inbuf, size_t *restrict inbytesleft, char **restrict outbuf, size_t *restrict outbytesleft);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/iconv.html
@@ -2316,7 +2316,7 @@ pub extern fn nextafterf(x: f32, y: f32) f32;
 
 /// long double nextafterl(long double x, long double y);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/nextafterl.html
-pub const nextafterl = @compileError("TODO: nextafterl");
+pub extern fn nextafterl(x: c_longdouble, y: c_longdouble) c_longdouble;
 
 /// double nexttoward(double x, long double y);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/nexttoward.html
@@ -2328,7 +2328,7 @@ pub const nexttowardf = @compileError("TODO: nexttowardf");
 
 /// long double nexttowardl(long double x, long double y);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/nexttowardl.html
-pub const nexttowardl = @compileError("TODO: nexttowardl");
+pub extern fn nexttowardl(x: c_longdouble, y: c_longdouble) c_longdouble;
 
 /// int nftw(const char *path, int (*fn)(const char *, const struct stat *, int, struct FTW *), int fd_limit, int flags);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/nftw.html
@@ -2736,7 +2736,7 @@ pub extern fn powf(x: f32, y: f32) f32;
 
 /// long double powl(long double x, long double y);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/powl.html
-pub const powl = @compileError("TODO: powl");
+pub extern fn powl(x: c_longdouble, y: c_longdouble) c_longdouble;
 
 /// ssize_t pread(int fildes, void *buf, size_t nbyte, off_t offset);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/pread.html
@@ -3308,7 +3308,7 @@ pub extern fn remainderf(x: f32, y: f32) f32;
 
 /// long double remainderl(long double x, long double y);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/remainderl.html
-pub const remainderl = @compileError("TODO: remainderl");
+pub extern fn remainderl(x: c_longdouble, y: c_longdouble) c_longdouble;
 
 /// int remove(const char *path);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/remove.html
