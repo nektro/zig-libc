@@ -18,6 +18,10 @@ pub const struct_lconv = opaque {};
 pub const pthread_t = c_ulong;
 pub const FILE = opaque {};
 pub const locale_t = *const opaque {};
+pub const nl_catd = *const opaque {};
+pub const intmax_t = i64;
+pub const wchar_t = c_int;
+pub const mode_t = c_uint;
 
 /// void _Exit(int status);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/_Exit.html
@@ -313,7 +317,7 @@ pub const catanl = @compileError("TODO catanl");
 
 /// int catclose(nl_catd catd);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/catclose.html
-pub const catclose = @compileError("TODO: catclose");
+pub extern fn catclose(catd: nl_catd) c_int;
 
 /// char *catgets(nl_catd catd, int set_id, int msg_id, const char *s);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/catgets.html
@@ -733,7 +737,7 @@ pub const dup2 = @compileError("TODO: dup2");
 
 /// locale_t duplocale(locale_t locobj);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/duplocale.html
-pub const duplocale = @compileError("TODO: duplocale");
+pub extern fn duplocale(locobj: locale_t) ?locale_t;
 
 /// void encrypt(char block[64], int edflag);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/encrypt.html
@@ -1145,7 +1149,7 @@ pub const freeaddrinfo = @compileError("TODO: freeaddrinfo");
 
 /// void freelocale(locale_t locobj);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/freelocale.html
-pub const freelocale = @compileError("TODO: freelocale");
+pub extern fn freelocale(locobj: locale_t) void;
 
 /// FILE *freopen(const char *restrict filename, const char *restrict mode, FILE *restrict stream);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/freopen.html
@@ -1521,7 +1525,7 @@ pub extern fn grantpt(fildes: c_int) c_int;
 
 /// int hcreate(size_t nel);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/hcreate.html
-pub const hcreate = @compileError("TODO: hcreate");
+pub extern fn hcreate(nel: usize) c_int;
 
 /// void hdestroy(void);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/hdestroy.html
@@ -1593,7 +1597,7 @@ pub extern fn ilogbl(x: c_longdouble) c_int;
 
 /// intmax_t imaxabs(intmax_t j);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/imaxabs.html
-pub const imaxabs = @compileError("TODO: imaxabs");
+pub extern fn imaxabs(j: intmax_t) intmax_t;
 
 /// imaxdiv_t imaxdiv(intmax_t numer, intmax_t denom);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/imaxdiv.html
@@ -3213,7 +3217,7 @@ pub const putwc = @compileError("TODO: putwc");
 
 /// wint_t putwchar(wchar_t wc);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/putwchar.html
-pub const putwchar = @compileError("TODO: putwchar");
+pub extern fn putwchar(wc: wchar_t) wint_t;
 
 /// ssize_t pwrite(int fildes, const void *buf, size_t nbyte, off_t offset);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/pwrite.html
@@ -3521,7 +3525,7 @@ pub const setbuf = @compileError("TODO: setbuf");
 
 /// int setegid(gid_t gid);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/setegid.html
-pub const setegid = @compileError("TODO: setegid");
+pub extern fn setegid(gid: gid_t) c_int;
 
 /// int setenv(const char *envname, const char *envval, int overwrite);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/setenv.html
@@ -3529,11 +3533,11 @@ pub const setenv = @compileError("TODO: setenv");
 
 /// int seteuid(uid_t uid);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/seteuid.html
-pub const seteuid = @compileError("TODO: seteuid");
+pub extern fn seteuid(uid: uid_t) c_int;
 
 /// int setgid(gid_t gid);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/setgid.html
-pub const setgid = @compileError("TODO: setgid");
+pub extern fn setgid(gid: gid_t) c_int;
 
 /// void setgrent(void);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/setgrent.html
@@ -3613,7 +3617,7 @@ pub const setstate = @compileError("TODO: setstate");
 
 /// int setuid(uid_t uid);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/setuid.html
-pub const setuid = @compileError("TODO: setuid");
+pub extern fn setuid(uid: uid_t) c_int;
 
 /// void setutxent(void);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/setutxent.html
@@ -4081,11 +4085,11 @@ pub const tcgetattr = @compileError("TODO: tcgetattr");
 
 /// pid_t tcgetpgrp(int fildes);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/tcgetpgrp.html
-pub const tcgetpgrp = @compileError("TODO: tcgetpgrp");
+pub extern fn tcgetpgrp(fildes: c_int) pid_t;
 
 /// pid_t tcgetsid(int fildes);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/tcgetsid.html
-pub const tcgetsid = @compileError("TODO: tcgetsid");
+pub extern fn tcgetsid(fildes: c_int) pid_t;
 
 /// int tcsendbreak(int fildes, int duration);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/tcsendbreak.html
@@ -4249,7 +4253,7 @@ pub const ulimit = @compileError("TODO: ulimit");
 
 /// mode_t umask(mode_t cmask);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/umask.html
-pub const umask = @compileError("TODO: umask");
+pub extern fn umask(cmask: mode_t) mode_t;
 
 /// int uname(struct utsname *name);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/uname.html
@@ -4281,7 +4285,7 @@ pub const unsetenv = @compileError("TODO: unsetenv");
 
 /// locale_t uselocale(locale_t newloc);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/uselocale.html
-pub const uselocale = @compileError("TODO: uselocale");
+pub extern fn uselocale(newloc: locale_t) locale_t;
 
 /// int utime(const char *path, const struct utimbuf *times);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/utime.html
@@ -4545,7 +4549,7 @@ pub const wcsxfrm_l = @compileError("TODO: wcsxfrm_l");
 
 /// int wctob(wint_t c);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/wctob.html
-pub const wctob = @compileError("TODO: wctob");
+pub extern fn wctob(c: wint_t) c_int;
 
 /// int wctomb(char *s, wchar_t wchar);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/wctomb.html
@@ -4569,7 +4573,7 @@ pub const wctype_l = @compileError("TODO: wctype_l");
 
 /// int wcwidth(wchar_t wc);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/wcwidth.html
-pub const wcwidth = @compileError("TODO: wcwidth");
+pub extern fn wcwidth(wc: wchar_t) c_int;
 
 /// wchar_t *wmemchr(const wchar_t *ws, wchar_t wc, size_t n);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/wmemchr.html
