@@ -421,7 +421,7 @@ pub const creall = @compileError("TODO creall");
 /// int creat(const char *path, mode_t mode);
 pub const creat = @compileError("TODO creat");
 
-/// char *crypt(const char *key, const char *salt); [Option End]
+/// char *crypt(const char *key, const char *salt);
 pub const crypt = @compileError("TODO crypt");
 
 /// double complex csin(double complex z);
@@ -688,7 +688,7 @@ pub const fdimf = @compileError("TODO fdimf");
 /// long double fdiml(long double x, long double y);
 pub const fdiml = @compileError("TODO fdiml");
 
-/// FILE *fdopen(int fildes, const char *mode); [Option End]
+/// FILE *fdopen(int fildes, const char *mode);
 pub const fdopen = @compileError("TODO fdopen");
 
 /// DIR *fdopendir(int fd);
@@ -895,7 +895,7 @@ pub const ftell = @compileError("TODO ftell");
 /// off_t ftello(FILE *stream);
 pub const ftello = @compileError("TODO ftello");
 
-/// key_t ftok(const char *path, int id); [Option End]
+/// key_t ftok(const char *path, int id);
 pub const ftok = @compileError("TODO ftok");
 
 /// int ftruncate(int fildes, off_t length);
@@ -3007,7 +3007,7 @@ pub const strxfrm = @compileError("TODO strxfrm");
 /// size_t strxfrm_l(char *restrict s1, const char *restrict s2, size_t n, locale_t locale);
 pub const strxfrm_l = @compileError("TODO strxfrm_l");
 
-/// void swab(const void *restrict src, void *restrict dest, ssize_t nbytes); [Option End]
+/// void swab(const void *restrict src, void *restrict dest, ssize_t nbytes);
 pub const swab = @compileError("TODO swab");
 
 /// int swprintf(wchar_t *restrict ws, size_t n, const wchar_t *restrict format, ...);
@@ -3184,7 +3184,7 @@ pub const ttyname_r = @compileError("TODO ttyname_r");
 /// void twalk(const void *root, void (*action)(const void *, VISIT, int));
 pub const twalk = @compileError("TODO twalk");
 
-/// void tzset(void); [Option End]
+/// void tzset(void);
 pub const tzset = @compileError("TODO tzset");
 
 /// long ulimit(int cmd, ...);
