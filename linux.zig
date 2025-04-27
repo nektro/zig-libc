@@ -220,39 +220,39 @@ pub const btowc = @compileError("TODO: btowc");
 
 /// double cabs(double complex z);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/cabs.html
-pub const cabs = @compileError("TODO: cabs");
+pub const cabs = @compileError("TODO cabs");
 
 /// float cabsf(float complex z);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/cabsf.html
-pub const cabsf = @compileError("TODO: cabsf");
+pub const cabsf = @compileError("TODO cabsf");
 
 /// long double cabsl(long double complex z);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/cabsl.html
-pub const cabsl = @compileError("TODO: cabsl");
+pub const cabsl = @compileError("TODO cabsl");
 
 /// double complex cacos(double complex z);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/cacos.html
-pub const cacos = @compileError("TODO: cacos");
+pub const cacos = @compileError("TODO cacos");
 
 /// float complex cacosf(float complex z);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/cacosf.html
-pub const cacosf = @compileError("TODO: cacosf");
+pub const cacosf = @compileError("TODO cacosf");
 
 /// double complex cacosh(double complex z);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/cacosh.html
-pub const cacosh = @compileError("TODO: cacosh");
+pub const cacosh = @compileError("TODO cacosh");
 
 /// float complex cacoshf(float complex z);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/cacoshf.html
-pub const cacoshf = @compileError("TODO: cacoshf");
+pub const cacoshf = @compileError("TODO cacoshf");
 
 /// long double complex cacoshl(long double complex z);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/cacoshl.html
-pub const cacoshl = @compileError("TODO: cacoshl");
+pub const cacoshl = @compileError("TODO cacoshl");
 
 /// long double complex cacosl(long double complex z);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/cacosl.html
-pub const cacosl = @compileError("TODO: cacosl");
+pub const cacosl = @compileError("TODO cacosl");
 
 /// void *calloc(size_t nelem, size_t elsize);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/calloc.html
@@ -260,63 +260,63 @@ pub const calloc = @compileError("TODO: calloc");
 
 /// double carg(double complex z);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/carg.html
-pub const carg = @compileError("TODO: carg");
+pub const carg = @compileError("TODO carg");
 
 /// float cargf(float complex z);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/cargf.html
-pub const cargf = @compileError("TODO: cargf");
+pub const cargf = @compileError("TODO cargf");
 
 /// long double cargl(long double complex z);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/cargl.html
-pub const cargl = @compileError("TODO: cargl");
+pub const cargl = @compileError("TODO cargl");
 
 /// double complex casin(double complex z);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/casin.html
-pub const casin = @compileError("TODO: casin");
+pub const casin = @compileError("TODO casin");
 
 /// float complex casinf(float complex z);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/casinf.html
-pub const casinf = @compileError("TODO: casinf");
+pub const casinf = @compileError("TODO casinf");
 
 /// double complex casinh(double complex z);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/casinh.html
-pub const casinh = @compileError("TODO: casinh");
+pub const casinh = @compileError("TODO casinh");
 
 /// float complex casinhf(float complex z);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/casinhf.html
-pub const casinhf = @compileError("TODO: casinhf");
+pub const casinhf = @compileError("TODO casinhf");
 
 /// long double complex casinhl(long double complex z);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/casinhl.html
-pub const casinhl = @compileError("TODO: casinhl");
+pub const casinhl = @compileError("TODO casinhl");
 
 /// long double complex casinl(long double complex z);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/casinl.html
-pub const casinl = @compileError("TODO: casinl");
+pub const casinl = @compileError("TODO casinl");
 
 /// double complex catan(double complex z);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/catan.html
-pub const catan = @compileError("TODO: catan");
+pub const catan = @compileError("TODO catan");
 
 /// float complex catanf(float complex z);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/catanf.html
-pub const catanf = @compileError("TODO: catanf");
+pub const catanf = @compileError("TODO catanf");
 
 /// double complex catanh(double complex z);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/catanh.html
-pub const catanh = @compileError("TODO: catanh");
+pub const catanh = @compileError("TODO catanh");
 
 /// float complex catanhf(float complex z);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/catanhf.html
-pub const catanhf = @compileError("TODO: catanhf");
+pub const catanhf = @compileError("TODO catanhf");
 
 /// long double complex catanhl(long double complex z);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/catanhl.html
-pub const catanhl = @compileError("TODO: catanhl");
+pub const catanhl = @compileError("TODO catanhl");
 
 /// long double complex catanl(long double complex z);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/catanl.html
-pub const catanl = @compileError("TODO: catanl");
+pub const catanl = @compileError("TODO catanl");
 
 /// int catclose(nl_catd catd);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/catclose.html
@@ -344,27 +344,27 @@ pub extern fn cbrtl(x: c_longdouble) c_longdouble;
 
 /// double complex ccos(double complex z);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/ccos.html
-pub const ccos = @compileError("TODO: ccos");
+pub const ccos = @compileError("TODO ccos");
 
 /// float complex ccosf(float complex z);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/ccosf.html
-pub const ccosf = @compileError("TODO: ccosf");
+pub const ccosf = @compileError("TODO ccosf");
 
 /// double complex ccosh(double complex z);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/ccosh.html
-pub const ccosh = @compileError("TODO: ccosh");
+pub const ccosh = @compileError("TODO ccosh");
 
 /// float complex ccoshf(float complex z);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/ccoshf.html
-pub const ccoshf = @compileError("TODO: ccoshf");
+pub const ccoshf = @compileError("TODO ccoshf");
 
 /// long double complex ccoshl(long double complex z);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/ccoshl.html
-pub const ccoshl = @compileError("TODO: ccoshl");
+pub const ccoshl = @compileError("TODO ccoshl");
 
 /// long double complex ccosl(long double complex z);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/ccosl.html
-pub const ccosl = @compileError("TODO: ccosl");
+pub const ccosl = @compileError("TODO ccosl");
 
 /// double ceil(double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/ceil.html
@@ -380,15 +380,15 @@ pub extern fn ceill(x: c_longdouble) c_longdouble;
 
 /// double complex cexp(double complex z);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/cexp.html
-pub const cexp = @compileError("TODO: cexp");
+pub const cexp = @compileError("TODO cexp");
 
 /// float complex cexpf(float complex z);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/cexpf.html
-pub const cexpf = @compileError("TODO: cexpf");
+pub const cexpf = @compileError("TODO cexpf");
 
 /// long double complex cexpl(long double complex z);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/cexpl.html
-pub const cexpl = @compileError("TODO: cexpl");
+pub const cexpl = @compileError("TODO cexpl");
 
 /// speed_t cfgetispeed(const struct termios *termios_p);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/cfgetispeed.html
@@ -420,15 +420,15 @@ pub const chown = @compileError("TODO: chown");
 
 /// double cimag(double complex z);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/cimag.html
-pub const cimag = @compileError("TODO: cimag");
+pub const cimag = @compileError("TODO cimag");
 
 /// float cimagf(float complex z);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/cimagf.html
-pub const cimagf = @compileError("TODO: cimagf");
+pub const cimagf = @compileError("TODO cimagf");
 
 /// long double cimagl(long double complex z);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/cimagl.html
-pub const cimagl = @compileError("TODO: cimagl");
+pub const cimagl = @compileError("TODO cimagl");
 
 /// void clearerr(FILE *stream);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/clearerr.html
@@ -460,15 +460,15 @@ pub const clock_settime = @compileError("TODO: clock_settime");
 
 /// double complex clog(double complex z);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/clog.html
-pub const clog = @compileError("TODO: clog");
+pub const clog = @compileError("TODO clog");
 
 /// float complex clogf(float complex z);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/clogf.html
-pub const clogf = @compileError("TODO: clogf");
+pub const clogf = @compileError("TODO clogf");
 
 /// long double complex clogl(long double complex z);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/clogl.html
-pub const clogl = @compileError("TODO: clogl");
+pub const clogl = @compileError("TODO clogl");
 
 /// int close(int fildes);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/close.html
@@ -488,15 +488,15 @@ pub const confstr = @compileError("TODO: confstr");
 
 /// double complex conj(double complex z);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/conj.html
-pub const conj = @compileError("TODO: conj");
+pub const conj = @compileError("TODO conj");
 
 /// float complex conjf(float complex z);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/conjf.html
-pub const conjf = @compileError("TODO: conjf");
+pub const conjf = @compileError("TODO conjf");
 
 /// long double complex conjl(long double complex z);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/conjl.html
-pub const conjl = @compileError("TODO: conjl");
+pub const conjl = @compileError("TODO conjl");
 
 /// int connect(int socket, const struct sockaddr *address, socklen_t address_len);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/connect.html
@@ -540,39 +540,39 @@ pub extern fn cosl(x: c_longdouble) c_longdouble;
 
 /// double complex cpow(double complex x, double complex y);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/cpow.html
-pub const cpow = @compileError("TODO: cpow");
+pub const cpow = @compileError("TODO cpow");
 
 /// float complex cpowf(float complex x, float complex y);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/cpowf.html
-pub const cpowf = @compileError("TODO: cpowf");
+pub const cpowf = @compileError("TODO cpowf");
 
 /// long double complex cpowl(long double complex x, long double complex y);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/cpowl.html
-pub const cpowl = @compileError("TODO: cpowl");
+pub const cpowl = @compileError("TODO cpowl");
 
 /// double complex cproj(double complex z);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/cproj.html
-pub const cproj = @compileError("TODO: cproj");
+pub const cproj = @compileError("TODO cproj");
 
 /// float complex cprojf(float complex z);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/cprojf.html
-pub const cprojf = @compileError("TODO: cprojf");
+pub const cprojf = @compileError("TODO cprojf");
 
 /// long double complex cprojl(long double complex z);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/cprojl.html
-pub const cprojl = @compileError("TODO: cprojl");
+pub const cprojl = @compileError("TODO cprojl");
 
 /// double creal(double complex z);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/creal.html
-pub const creal = @compileError("TODO: creal");
+pub const creal = @compileError("TODO creal");
 
 /// float crealf(float complex z);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/crealf.html
-pub const crealf = @compileError("TODO: crealf");
+pub const crealf = @compileError("TODO crealf");
 
 /// long double creall(long double complex z);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/creall.html
-pub const creall = @compileError("TODO: creall");
+pub const creall = @compileError("TODO creall");
 
 /// int creat(const char *path, mode_t mode);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/creat.html
@@ -584,63 +584,63 @@ pub const crypt = @compileError("TODO: crypt");
 
 /// double complex csin(double complex z);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/csin.html
-pub const csin = @compileError("TODO: csin");
+pub const csin = @compileError("TODO csin");
 
 /// float complex csinf(float complex z);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/csinf.html
-pub const csinf = @compileError("TODO: csinf");
+pub const csinf = @compileError("TODO csinf");
 
 /// double complex csinh(double complex z);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/csinh.html
-pub const csinh = @compileError("TODO: csinh");
+pub const csinh = @compileError("TODO csinh");
 
 /// float complex csinhf(float complex z);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/csinhf.html
-pub const csinhf = @compileError("TODO: csinhf");
+pub const csinhf = @compileError("TODO csinhf");
 
 /// long double complex csinhl(long double complex z);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/csinhl.html
-pub const csinhl = @compileError("TODO: csinhl");
+pub const csinhl = @compileError("TODO csinhl");
 
 /// long double complex csinl(long double complex z);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/csinl.html
-pub const csinl = @compileError("TODO: csinl");
+pub const csinl = @compileError("TODO csinl");
 
 /// double complex csqrt(double complex z);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/csqrt.html
-pub const csqrt = @compileError("TODO: csqrt");
+pub const csqrt = @compileError("TODO csqrt");
 
 /// float complex csqrtf(float complex z);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/csqrtf.html
-pub const csqrtf = @compileError("TODO: csqrtf");
+pub const csqrtf = @compileError("TODO csqrtf");
 
 /// long double complex csqrtl(long double complex z);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/csqrtl.html
-pub const csqrtl = @compileError("TODO: csqrtl");
+pub const csqrtl = @compileError("TODO csqrtl");
 
 /// double complex ctan(double complex z);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/ctan.html
-pub const ctan = @compileError("TODO: ctan");
+pub const ctan = @compileError("TODO ctan");
 
 /// float complex ctanf(float complex z);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/ctanf.html
-pub const ctanf = @compileError("TODO: ctanf");
+pub const ctanf = @compileError("TODO ctanf");
 
 /// double complex ctanh(double complex z);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/ctanh.html
-pub const ctanh = @compileError("TODO: ctanh");
+pub const ctanh = @compileError("TODO ctanh");
 
 /// float complex ctanhf(float complex z);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/ctanhf.html
-pub const ctanhf = @compileError("TODO: ctanhf");
+pub const ctanhf = @compileError("TODO ctanhf");
 
 /// long double complex ctanhl(long double complex z);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/ctanhl.html
-pub const ctanhl = @compileError("TODO: ctanhl");
+pub const ctanhl = @compileError("TODO ctanhl");
 
 /// long double complex ctanl(long double complex z);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/ctanl.html
-pub const ctanl = @compileError("TODO: ctanl");
+pub const ctanl = @compileError("TODO ctanl");
 
 /// char *ctermid(char *s);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/ctermid.html
