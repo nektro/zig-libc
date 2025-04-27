@@ -152,15 +152,15 @@ pub extern fn atan(x: f64) f64;
 
 /// double atan2(double y, double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/atan2.html
-pub const atan2 = @compileError("TODO: atan2");
+pub extern fn atan2(y: f64, x: f64) f64;
 
 /// float atan2f(float y, float x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/atan2f.html
-pub const atan2f = @compileError("TODO: atan2f");
+pub extern fn atan2f(y: f32, x: f32) f32;
 
 /// long double atan2l(long double y, long double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/atan2l.html
-pub const atan2l = @compileError("TODO: atan2l");
+pub extern fn atan2l(y: c_longdouble, x: c_longdouble) c_longdouble;
 
 /// float atanf(float x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/atanf.html
