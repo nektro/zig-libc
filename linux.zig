@@ -465,7 +465,7 @@ pub const clogl = @compileError("TODO clogl");
 
 /// int close(int fildes);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/close.html
-pub const close = @compileError("TODO: close");
+pub extern fn close(fildes: c_int) c_int;
 
 /// int closedir(DIR *dirp);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/closedir.html
@@ -725,7 +725,7 @@ pub extern fn drand48() f64;
 
 /// int dup(int fildes);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/dup.html
-pub const dup = @compileError("TODO: dup");
+pub extern fn dup(fildes: c_int) c_int;
 
 /// int dup2(int fildes, int fildes2);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/dup2.html
@@ -881,7 +881,7 @@ pub const fattach = @compileError("TODO: fattach");
 
 /// int fchdir(int fildes);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/fchdir.html
-pub const fchdir = @compileError("TODO: fchdir");
+pub extern fn fchdir(fildes: c_int) c_int;
 
 /// int fchmod(int fildes, mode_t mode);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/fchmod.html
@@ -909,7 +909,7 @@ pub const fcntl = @compileError("TODO: fcntl");
 
 /// int fdatasync(int fildes);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/fdatasync.html
-pub const fdatasync = @compileError("TODO: fdatasync");
+pub extern fn fdatasync(fildes: c_int) c_int;
 
 /// int fdetach(const char *path);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/fdetach.html
@@ -937,7 +937,7 @@ pub const fdopendir = @compileError("TODO: fdopendir");
 
 /// int feclearexcept(int excepts);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/feclearexcept.html
-pub const feclearexcept = @compileError("TODO: feclearexcept");
+pub extern fn feclearexcept(excepts: c_int) c_int;
 
 /// int fegetenv(fenv_t *envp);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/fegetenv.html
@@ -961,7 +961,7 @@ pub const feof = @compileError("TODO: feof");
 
 /// int feraiseexcept(int excepts);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/feraiseexcept.html
-pub const feraiseexcept = @compileError("TODO: feraiseexcept");
+pub extern fn feraiseexcept(excepts: c_int) c_int;
 
 /// int ferror(FILE *stream);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/ferror.html
@@ -977,11 +977,11 @@ pub const fesetexceptflag = @compileError("TODO: fesetexceptflag");
 
 /// int fesetround(int round);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/fesetround.html
-pub const fesetround = @compileError("TODO: fesetround");
+pub extern fn fesetround(round: c_int) c_int;
 
 /// int fetestexcept(int excepts);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/fetestexcept.html
-pub const fetestexcept = @compileError("TODO: fetestexcept");
+pub extern fn fetestexcept(excepts: c_int) c_int;
 
 /// int feupdateenv(const fenv_t *envp);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/feupdateenv.html
@@ -1193,7 +1193,7 @@ pub const fstatvfs = @compileError("TODO: fstatvfs");
 
 /// int fsync(int fildes);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/fsync.html
-pub const fsync = @compileError("TODO: fsync");
+pub extern fn fsync(fildes: c_int) c_int;
 
 /// long ftell(FILE *stream);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/ftell.html
@@ -1517,7 +1517,7 @@ pub const gmtime_r = @compileError("TODO: gmtime_r");
 
 /// int grantpt(int fildes);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/grantpt.html
-pub const grantpt = @compileError("TODO: grantpt");
+pub extern fn grantpt(fildes: c_int) c_int;
 
 /// int hcreate(size_t nel);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/hcreate.html
@@ -1649,11 +1649,11 @@ pub extern fn isascii(c: c_int) c_int;
 
 /// int isastream(int fildes);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/isastream.html
-pub const isastream = @compileError("TODO: isastream");
+pub extern fn isastream(fildes: c_int) c_int;
 
 /// int isatty(int fildes);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/isatty.html
-pub const isatty = @compileError("TODO: isatty");
+pub extern fn isatty(fildes: c_int) c_int;
 
 /// int isblank(int c);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/isblank.html
@@ -1869,7 +1869,7 @@ pub const l64a = @compileError("TODO: l64a");
 
 /// long labs(long i);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/labs.html
-pub const labs = @compileError("TODO: labs");
+pub extern fn labs(i: c_long) c_long;
 
 /// int lchown(const char *path, uid_t owner, gid_t group);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/lchown.html
@@ -2177,7 +2177,7 @@ pub const mlock = @compileError("TODO: mlock");
 
 /// int mlockall(int flags);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/mlockall.html
-pub const mlockall = @compileError("TODO: mlockall");
+pub extern fn mlockall(flags: c_int) c_int;
 
 /// void *mmap(void *addr, size_t len, int prot, int flags, int fildes, off_t off);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/mmap.html
@@ -2337,7 +2337,7 @@ pub const nftw = @compileError("TODO: nftw");
 
 /// int nice(int incr);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/nice.html
-pub const nice = @compileError("TODO: nice");
+pub extern fn nice(incr: c_int) c_int;
 
 /// char *nl_langinfo(nl_item item);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/nl_langinfo.html
@@ -3225,7 +3225,7 @@ pub const qsort = @compileError("TODO: qsort");
 
 /// int raise(int sig);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/raise.html
-pub const raise = @compileError("TODO: raise");
+pub extern fn raise(sig: c_int) c_int;
 
 /// int rand(void);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/rand.html
@@ -3541,7 +3541,7 @@ pub extern fn setgrent() void;
 
 /// void sethostent(int stayopen);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/sethostent.html
-pub const sethostent = @compileError("TODO: sethostent");
+pub extern fn sethostent(stayopen: c_int) void;
 
 /// int setitimer(int which, const struct itimerval *restrict value, struct itimerval *restrict ovalue);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/setitimer.html
@@ -3557,11 +3557,11 @@ pub const setlocale = @compileError("TODO: setlocale");
 
 /// int setlogmask(int maskpri);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/setlogmask.html
-pub const setlogmask = @compileError("TODO: setlogmask");
+pub extern fn setlogmask(maskpri: c_int) c_int;
 
 /// void setnetent(int stayopen);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/setnetent.html
-pub const setnetent = @compileError("TODO: setnetent");
+pub extern fn setnetent(stayopen: c_int) void;
 
 /// int setpgid(pid_t pid, pid_t pgid);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/setpgid.html
@@ -3577,7 +3577,7 @@ pub const setpriority = @compileError("TODO: setpriority");
 
 /// void setprotoent(int stayopen);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/setprotoent.html
-pub const setprotoent = @compileError("TODO: setprotoent");
+pub extern fn setprotoent(stayopen: c_int) void;
 
 /// void setpwent(void);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/setpwent.html
@@ -3597,7 +3597,7 @@ pub const setrlimit = @compileError("TODO: setrlimit");
 
 /// void setservent(int stayopen);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/setservent.html
-pub const setservent = @compileError("TODO: setservent");
+pub extern fn setservent(stayopen: c_int) void;
 
 /// pid_t setsid(void);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/setsid.html
@@ -3677,11 +3677,11 @@ pub const sigfillset = @compileError("TODO: sigfillset");
 
 /// int sighold(int sig);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/sighold.html
-pub const sighold = @compileError("TODO: sighold");
+pub extern fn sighold(sig: c_int) c_int;
 
 /// int sigignore(int sig);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/sigignore.html
-pub const sigignore = @compileError("TODO: sigignore");
+pub extern fn sigignore(sig: c_int) c_int;
 
 /// int siginterrupt(int sig, int flag);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/siginterrupt.html
@@ -3697,7 +3697,7 @@ pub const signal = @compileError("TODO: signal");
 
 /// int sigpause(int sig);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/sigpause.html
-pub const sigpause = @compileError("TODO: sigpause");
+pub extern fn sigpause(sig: c_int) c_int;
 
 /// int sigpending(sigset_t *set);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/sigpending.html
@@ -3713,7 +3713,7 @@ pub const sigqueue = @compileError("TODO: sigqueue");
 
 /// int sigrelse(int sig);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/sigrelse.html
-pub const sigrelse = @compileError("TODO: sigrelse");
+pub extern fn sigrelse(sig: c_int) c_int;
 
 /// void (*sigset(int sig, void (*disp)(int)))(int);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/sigset.html
@@ -3769,7 +3769,7 @@ pub const snprintf = @compileError("TODO: snprintf");
 
 /// int sockatmark(int s);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/sockatmark.html
-pub const sockatmark = @compileError("TODO: sockatmark");
+pub extern fn sockatmark(s: c_int) c_int;
 
 /// int socket(int domain, int type, int protocol);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/socket.html
@@ -3797,7 +3797,7 @@ pub extern fn sqrtl(x: c_longdouble) c_longdouble;
 
 /// void srand(unsigned seed);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/srand.html
-pub const srand = @compileError("TODO: srand");
+pub extern fn srand(seed: c_uint) void;
 
 /// void srand48(long seedval);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/srand48.html
@@ -3805,7 +3805,7 @@ pub const srand48 = @compileError("TODO: srand48");
 
 /// void srandom(unsigned seed);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/srandom.html
-pub const srandom = @compileError("TODO: srandom");
+pub extern fn srandom(seed: c_uint) void;
 
 /// int sscanf(const char *restrict s, const char *restrict format, ...);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/sscanf.html
@@ -4029,7 +4029,7 @@ pub extern fn sync() void;
 
 /// long sysconf(int name);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/sysconf.html
-pub const sysconf = @compileError("TODO: sysconf");
+pub extern fn sysconf(name: c_int) c_long;
 
 /// void syslog(int priority, const char *message, ... /* arguments */);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/syslog.html
@@ -4065,7 +4065,7 @@ pub extern fn tanl(x: c_longdouble) c_longdouble;
 
 /// int tcdrain(int fildes);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/tcdrain.html
-pub const tcdrain = @compileError("TODO: tcdrain");
+pub extern fn tcdrain(fildes: c_int) c_int;
 
 /// int tcflow(int fildes, int action);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/tcflow.html
@@ -4273,7 +4273,7 @@ pub const unlinkat = @compileError("TODO: unlinkat");
 
 /// int unlockpt(int fildes);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/unlockpt.html
-pub const unlockpt = @compileError("TODO: unlockpt");
+pub extern fn unlockpt(fildes: c_int) c_int;
 
 /// int unsetenv(const char *name);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/unsetenv.html
