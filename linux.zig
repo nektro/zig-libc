@@ -2875,11 +2875,11 @@ pub const stpcpy = @compileError("TODO stpcpy");
 /// char *stpncpy(char *restrict s1, const char *restrict s2, size_t n);
 pub const stpncpy = @compileError("TODO stpncpy");
 
-/// int strncasecmp(const char *s1, const char *s2, size_t n);
-pub const strncasecmp = @compileError("TODO strncasecmp");
+/// int strcasecmp(const char *s1, const char *s2);
+pub const strcasecmp = @compileError("TODO strcasecmp");
 
-/// int strncasecmp_l(const char *s1, const char *s2, size_t n, locale_t locale);
-pub const strncasecmp_l = @compileError("TODO strncasecmp_l");
+/// int strcasecmp_l(const char *s1, const char *s2, locale_t locale);
+pub const strcasecmp_l = @compileError("TODO strcasecmp_l");
 
 /// char *strcat(char *restrict s1, const char *restrict s2);
 pub const strcat = @compileError("TODO strcat");
@@ -2902,8 +2902,8 @@ pub const strcpy = @compileError("TODO strcpy");
 /// size_t strcspn(const char *s1, const char *s2);
 pub const strcspn = @compileError("TODO strcspn");
 
-/// char *strndup(const char *s, size_t size);
-pub const strndup = @compileError("TODO strndup");
+/// char *strdup(const char *s);
+pub const strdup = @compileError("TODO strdup");
 
 /// char *strerror(int errnum);
 pub const strerror = @compileError("TODO strerror");
@@ -2926,8 +2926,8 @@ pub const strftime = @compileError("TODO strftime");
 /// size_t strftime_l(char *restrict s, size_t maxsize, const char *restrict format, const struct tm *restrict timeptr, locale_t locale);
 pub const strftime_l = @compileError("TODO strftime_l");
 
-/// size_t strnlen(const char *s, size_t maxlen);
-pub const strnlen = @compileError("TODO strnlen");
+/// size_t strlen(const char *s);
+pub const strlen = @compileError("TODO strlen");
 
 /// int strncasecmp(const char *s1, const char *s2, size_t n);
 pub const strncasecmp = @compileError("TODO strncasecmp");
@@ -3376,8 +3376,8 @@ pub const wcstod = @compileError("TODO wcstod");
 /// float wcstof(const wchar_t *restrict nptr, wchar_t **restrict endptr);
 pub const wcstof = @compileError("TODO wcstof");
 
-/// uintmax_t wcstoumax(const wchar_t *restrict nptr, wchar_t **restrict endptr, int base);
-pub const wcstoumax = @compileError("TODO wcstoumax");
+///  intmax_t wcstoimax(const wchar_t *restrict nptr, wchar_t **restrict endptr, int base);
+pub const wcstoimax = @compileError("TODO wcstoimax");
 
 /// wchar_t *wcstok(wchar_t *restrict ws1, const wchar_t *restrict ws2, wchar_t **restrict ptr);
 pub const wcstok = @compileError("TODO wcstok");
