@@ -108,7 +108,7 @@ pub const aio_write = @compileError("TODO: aio_write");
 
 /// unsigned alarm(unsigned seconds);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/alarm.html
-pub const alarm = @compileError("TODO: alarm");
+pub extern fn alarm(seconds: c_uint) c_uint;
 
 /// int alphasort(const struct dirent **d1, const struct dirent **d2);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/alphasort.html
@@ -3784,7 +3784,7 @@ pub extern fn sinl(x: c_longdouble) c_longdouble;
 
 /// unsigned sleep(unsigned seconds);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/sleep.html
-pub const sleep = @compileError("TODO: sleep");
+pub extern fn sleep(seconds: c_uint) c_uint;
 
 /// int snprintf(char *restrict s, size_t n, const char *restrict format, ...);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/snprintf.html
