@@ -496,7 +496,7 @@ pub const connect = @compileError("TODO: connect");
 
 /// double copysign(double x, double y);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/copysign.html
-pub const copysign = @compileError("TODO: copysign");
+pub extern fn copysign(x: f64, y: f64) f64;
 
 /// float copysignf(float x, float y);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/copysignf.html
@@ -916,7 +916,7 @@ pub const fdetach = @compileError("TODO: fdetach");
 
 /// double fdim(double x, double y);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/fdim.html
-pub const fdim = @compileError("TODO: fdim");
+pub extern fn fdim(x: f64, y: f64) f64;
 
 /// float fdimf(float x, float y);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/fdimf.html
@@ -1052,7 +1052,7 @@ pub const fmal = @compileError("TODO: fmal");
 
 /// double fmax(double x, double y);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/fmax.html
-pub const fmax = @compileError("TODO: fmax");
+pub extern fn fmax(x: f64, y: f64) f64;
 
 /// float fmaxf(float x, float y);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/fmaxf.html
@@ -1068,7 +1068,7 @@ pub const fmemopen = @compileError("TODO: fmemopen");
 
 /// double fmin(double x, double y);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/fmin.html
-pub const fmin = @compileError("TODO: fmin");
+pub extern fn fmin(x: f64, y: f64) f64;
 
 /// float fminf(float x, float y);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/fminf.html
@@ -1080,7 +1080,7 @@ pub const fminl = @compileError("TODO: fminl");
 
 /// double fmod(double x, double y);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/fmod.html
-pub const fmod = @compileError("TODO: fmod");
+pub extern fn fmod(x: f64, y: f64) f64;
 
 /// float fmodf(float x, float y);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/fmodf.html
@@ -1540,7 +1540,7 @@ pub const htons = @compileError("TODO: htons");
 
 /// double hypot(double x, double y);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/hypot.html
-pub const hypot = @compileError("TODO: hypot");
+pub extern fn hypot(x: f64, y: f64) f64;
 
 /// float hypotf(float x, float y);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/hypotf.html
@@ -2308,7 +2308,7 @@ pub const newlocale = @compileError("TODO: newlocale");
 
 /// double nextafter(double x, double y);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/nextafter.html
-pub const nextafter = @compileError("TODO: nextafter");
+pub extern fn nextafter(x: f64, y: f64) f64;
 
 /// float nextafterf(float x, float y);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/nextafterf.html
@@ -2728,7 +2728,7 @@ pub const posix_typed_mem_open = @compileError("TODO: posix_typed_mem_open");
 
 /// double pow(double x, double y);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/pow.html
-pub const pow = @compileError("TODO: pow");
+pub extern fn pow(x: f64, y: f64) f64;
 
 /// float powf(float x, float y);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/powf.html
@@ -3300,7 +3300,7 @@ pub const regfree = @compileError("TODO: regfree");
 
 /// double remainder(double x, double y);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/remainder.html
-pub const remainder = @compileError("TODO: remainder");
+pub extern fn remainder(x: f64, y: f64) f64;
 
 /// float remainderf(float x, float y);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/remainderf.html
