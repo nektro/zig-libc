@@ -24,6 +24,8 @@ pub const wchar_t = c_int;
 pub const mode_t = c_uint;
 pub const struct_sockaddr = linux.sockaddr;
 pub const socklen_t = c_uint;
+pub const clockid_t = c_int;
+pub const struct_timespec = linux.timespec;
 
 /// void _Exit(int status);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/_Exit.html
@@ -207,7 +209,7 @@ pub const basename = @compileError("TODO: basename");
 
 /// int bind(int socket, const struct sockaddr *address, socklen_t address_len);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/bind.html
-pub const bind = @compileError("TODO: bind");
+pub extern fn bind(socket: c_int, address: *const struct_sockaddr, address_len: socklen_t) c_int;
 
 /// void *bsearch(const void *key, const void *base, size_t nel, size_t width, int (*compar)(const void *, const void *));
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/bsearch.html
@@ -255,7 +257,7 @@ pub const cacosl = @compileError("TODO cacosl");
 
 /// void *calloc(size_t nelem, size_t elsize);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/calloc.html
-pub const calloc = @compileError("TODO: calloc");
+pub extern fn calloc(nelem: usize, elsize: usize) ?*anyopaque;
 
 /// double carg(double complex z);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/carg.html
@@ -407,15 +409,15 @@ pub const cfsetospeed = @compileError("TODO: cfsetospeed");
 
 /// int chdir(const char *path);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/chdir.html
-pub const chdir = @compileError("TODO: chdir");
+pub extern fn chdir(path: [*:0]const u8) c_int;
 
 /// int chmod(const char *path, mode_t mode);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/chmod.html
-pub const chmod = @compileError("TODO: chmod");
+pub extern fn chmod(path: [*:0]const u8, mode: mode_t) c_int;
 
 /// int chown(const char *path, uid_t owner, gid_t group);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/chown.html
-pub const chown = @compileError("TODO: chown");
+pub extern fn chown(path: [*:0]const u8, owner: uid_t, group: gid_t) c_int;
 
 /// double cimag(double complex z);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/cimag.html
@@ -439,15 +441,15 @@ pub extern fn clock() clock_t;
 
 /// int clock_getcpuclockid(pid_t pid, clockid_t *clock_id);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/clock_getcpuclockid.html
-pub const clock_getcpuclockid = @compileError("TODO: clock_getcpuclockid");
+pub extern fn clock_getcpuclockid(pid: pid_t, clock_id: *clockid_t) c_int;
 
 /// int clock_getres(clockid_t clock_id, struct timespec *res);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/clock_getres.html
-pub const clock_getres = @compileError("TODO: clock_getres");
+pub extern fn clock_getres(clock_id: clockid_t, res: ?*struct_timespec) c_int;
 
 /// int clock_gettime(clockid_t clock_id, struct timespec *tp);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/clock_gettime.html
-pub const clock_gettime = @compileError("TODO: clock_gettime");
+pub extern fn clock_gettime(clock_id: clockid_t, tp: *struct_timespec) c_int;
 
 /// int clock_nanosleep(clockid_t clock_id, int flags, const struct timespec *rqtp, struct timespec *rmtp);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/clock_nanosleep.html
