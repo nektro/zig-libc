@@ -577,7 +577,7 @@ pub const creall = @compileError("TODO creall");
 
 /// int creat(const char *path, mode_t mode);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/creat.html
-pub const creat = @compileError("TODO: creat");
+pub extern fn creat(path: [*:0]const u8, mode: mode_t) c_int;
 
 /// char *crypt(const char *key, const char *salt);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/crypt.html
