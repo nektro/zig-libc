@@ -712,7 +712,7 @@ pub extern fn div(numer: c_int, denom: c_int) div_t;
 
 /// int dlclose(void *handle);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/dlclose.html
-pub const dlclose = @compileError("TODO: dlclose");
+pub extern fn dlclose(handle: *anyopaque) c_int;
 
 /// char *dlerror(void);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/dlerror.html
