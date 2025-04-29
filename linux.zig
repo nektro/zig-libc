@@ -27,6 +27,7 @@ pub const socklen_t = c_uint;
 pub const clockid_t = c_int;
 pub const struct_timespec = linux.timespec;
 pub const DIR = opaque {};
+pub const time_t = i64;
 
 /// void _Exit(int status);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/_Exit.html
@@ -650,7 +651,7 @@ pub extern fn ctermid(s: ?[*:0]u8) [*:0]u8;
 
 /// char *ctime(const time_t *clock);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/ctime.html
-pub const ctime = @compileError("TODO: ctime");
+pub extern fn ctime(clock: *const time_t) ?[*:0]u8;
 
 /// char *ctime_r(const time_t *clock, char *buf);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/ctime_r.html
