@@ -740,7 +740,7 @@ pub extern fn dup(fildes: c_int) c_int;
 
 /// int dup2(int fildes, int fildes2);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/dup2.html
-pub const dup2 = @compileError("TODO: dup2");
+pub extern fn dup2(fildes: c_int, fildes2: c_int) c_int;
 
 /// locale_t duplocale(locale_t locobj);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/duplocale.html
