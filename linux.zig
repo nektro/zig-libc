@@ -193,7 +193,7 @@ pub extern fn atof(str: [*:0]const u8) f64;
 
 /// int atoi(const char *str);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/atoi.html
-pub const atoi = @compileError("TODO: atoi");
+pub extern fn atoi(str: [*:0]const u8) c_int;
 
 /// long atol(const char *str);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/atol.html
