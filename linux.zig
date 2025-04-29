@@ -213,7 +213,7 @@ pub extern fn bind(socket: c_int, address: *const struct_sockaddr, address_len: 
 
 /// void *bsearch(const void *key, const void *base, size_t nel, size_t width, int (*compar)(const void *, const void *));
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/bsearch.html
-pub const bsearch = @compileError("TODO: bsearch");
+pub extern fn bsearch(key: *const anyopaque, base: *const anyopaque, nel: usize, width: usize, compar: *const fn (*const anyopaque, *const anyopaque) callconv(.C) c_int) ?*anyopaque;
 
 /// wint_t btowc(int c);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/btowc.html
