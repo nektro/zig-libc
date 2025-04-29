@@ -908,7 +908,7 @@ pub extern fn fchown(fildes: c_int, owner: uid_t, group: gid_t) c_int;
 
 /// int fchownat(int fd, const char *path, uid_t owner, gid_t group, int flag);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/fchownat.html
-pub const fchownat = @compileError("TODO: fchownat");
+pub extern fn fchownat(fd: c_int, path: [*:0]const u8, owner: uid_t, group: gid_t, flag: c_int) c_int;
 
 /// int fclose(FILE *stream);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/fclose.html
