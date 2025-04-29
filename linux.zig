@@ -780,7 +780,7 @@ pub extern fn endutxent() void;
 
 /// double erand48(unsigned short xsubi[3]);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/erand48.html
-pub const erand48 = @compileError("TODO: erand48");
+pub extern fn erand48(xsubi: *[3]c_ushort) f64;
 
 /// double erf(double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/erf.html
