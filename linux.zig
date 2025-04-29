@@ -502,7 +502,7 @@ pub const conjl = @compileError("TODO conjl");
 
 /// int connect(int socket, const struct sockaddr *address, socklen_t address_len);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/connect.html
-pub const connect = @compileError("TODO: connect");
+pub extern fn connect(socket: c_int, address: *const struct_sockaddr, address_len: socklen_t) c_int;
 
 /// double copysign(double x, double y);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/copysign.html
