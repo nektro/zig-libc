@@ -582,7 +582,7 @@ pub extern fn creat(path: [*:0]const u8, mode: mode_t) c_int;
 
 /// char *crypt(const char *key, const char *salt);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/crypt.html
-pub const crypt = @compileError("TODO: crypt");
+pub extern fn crypt(key: [*:0]const u8, salt: [*]const u8) ?[*:0]u8;
 
 /// double complex csin(double complex z);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/csin.html
