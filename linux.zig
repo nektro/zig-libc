@@ -646,7 +646,7 @@ pub const ctanl = @compileError("TODO ctanl");
 
 /// char *ctermid(char *s);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/ctermid.html
-pub const ctermid = @compileError("TODO: ctermid");
+pub extern fn ctermid(s: ?[*:0]u8) [*:0]u8;
 
 /// char *ctime(const time_t *clock);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/ctime.html
