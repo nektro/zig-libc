@@ -724,7 +724,7 @@ pub extern fn dlopen(file: [*:0]const u8, mode: c_int) ?*anyopaque;
 
 /// void *dlsym(void *restrict handle, const char *restrict name);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/dlsym.html
-pub const dlsym = @compileError("TODO: dlsym");
+pub extern fn dlsym(noalias handle: *anyopaque, noalias name: [*:0]const u8) ?*anyopaque;
 
 /// int dprintf(int fildes, const char *restrict format, ...);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/dprintf.html
