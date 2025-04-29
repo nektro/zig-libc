@@ -884,7 +884,7 @@ pub extern fn fabsl(x: c_longdouble) c_longdouble;
 
 /// int faccessat(int fd, const char *path, int amode, int flag);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/faccessat.html
-pub const faccessat = @compileError("TODO: faccessat");
+pub extern fn faccessat(fd: c_int, path: [*:0]const u8, amode: c_int, flag: c_int) c_int;
 
 /// int fattach(int fildes, const char *path);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/fattach.html
