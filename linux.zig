@@ -896,7 +896,7 @@ pub extern fn fchdir(fildes: c_int) c_int;
 
 /// int fchmod(int fildes, mode_t mode);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/fchmod.html
-pub const fchmod = @compileError("TODO: fchmod");
+pub extern fn fchmod(fildes: c_int, mode: mode_t) c_int;
 
 /// int fchmodat(int fd, const char *path, mode_t mode, int flag);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/fchmodat.html
