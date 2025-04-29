@@ -200,8 +200,8 @@ pub extern fn atoi(str: [*:0]const u8) c_int;
 pub extern fn atol(str: [*:0]const u8) c_long;
 
 /// long long atoll(const char *nptr);
-/// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/long.html
-pub const long = @compileError("TODO: long");
+/// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/atoll.html
+pub extern fn atoll(nptr: [*:0]const u8) c_longlong;
 
 /// char *basename(char *path);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/basename.html
