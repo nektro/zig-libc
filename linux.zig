@@ -26,6 +26,7 @@ pub const struct_sockaddr = linux.sockaddr;
 pub const socklen_t = c_uint;
 pub const clockid_t = c_int;
 pub const struct_timespec = linux.timespec;
+pub const DIR = opaque {};
 
 /// void _Exit(int status);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/_Exit.html
@@ -477,7 +478,7 @@ pub extern fn close(fildes: c_int) c_int;
 
 /// int closedir(DIR *dirp);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/closedir.html
-pub const closedir = @compileError("TODO: closedir");
+pub extern fn closedir(dirp: *DIR) c_int;
 
 /// void closelog(void);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/closelog.html
