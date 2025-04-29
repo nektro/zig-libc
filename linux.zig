@@ -900,7 +900,7 @@ pub extern fn fchmod(fildes: c_int, mode: mode_t) c_int;
 
 /// int fchmodat(int fd, const char *path, mode_t mode, int flag);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/fchmodat.html
-pub const fchmodat = @compileError("TODO: fchmodat");
+pub extern fn fchmodat(fd: c_int, path: [*:0]const u8, mode: mode_t, flag: c_int) c_int;
 
 /// int fchown(int fildes, uid_t owner, gid_t group);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/fchown.html
