@@ -695,7 +695,7 @@ pub const dbm_store = @compileError("TODO: dbm_store");
 
 /// double difftime(time_t time1, time_t time0);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/difftime.html
-pub const difftime = @compileError("TODO: difftime");
+pub extern fn difftime(time1: time_t, time0: time_t) f64;
 
 /// int dirfd(DIR *dirp);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/dirfd.html
