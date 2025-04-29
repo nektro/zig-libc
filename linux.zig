@@ -197,7 +197,7 @@ pub extern fn atoi(str: [*:0]const u8) c_int;
 
 /// long atol(const char *str);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/atol.html
-pub const atol = @compileError("TODO: atol");
+pub extern fn atol(str: [*:0]const u8) c_long;
 
 /// long long atoll(const char *nptr);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/long.html
