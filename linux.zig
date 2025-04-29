@@ -185,7 +185,7 @@ pub extern fn atanl(x: c_longdouble) c_longdouble;
 
 /// int atexit(void (*func)(void));
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/atexit.html
-pub const atexit = @compileError("TODO: atexit");
+pub extern fn atexit(func: *const fn () callconv(.C) void) c_int;
 
 /// double atof(const char *str);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/atof.html
