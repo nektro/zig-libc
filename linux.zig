@@ -457,7 +457,7 @@ pub extern fn clock_nanosleep(clock_id: clockid_t, flags: c_int, rqtp: *const st
 
 /// int clock_settime(clockid_t clock_id, const struct timespec *tp);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/clock_settime.html
-pub const clock_settime = @compileError("TODO: clock_settime");
+pub extern fn clock_settime(clock_id: clockid_t, tp: *const struct_timespec) c_int;
 
 /// double complex clog(double complex z);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/clog.html
