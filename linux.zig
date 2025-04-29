@@ -699,7 +699,7 @@ pub extern fn difftime(time1: time_t, time0: time_t) f64;
 
 /// int dirfd(DIR *dirp);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/dirfd.html
-pub const dirfd = @compileError("TODO: dirfd");
+pub extern fn dirfd(dirp: *DIR) c_int;
 
 /// char *dirname(char *path);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/dirname.html
