@@ -904,7 +904,7 @@ pub extern fn fchmodat(fd: c_int, path: [*:0]const u8, mode: mode_t, flag: c_int
 
 /// int fchown(int fildes, uid_t owner, gid_t group);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/fchown.html
-pub const fchown = @compileError("TODO: fchown");
+pub extern fn fchown(fildes: c_int, owner: uid_t, group: gid_t) c_int;
 
 /// int fchownat(int fd, const char *path, uid_t owner, gid_t group, int flag);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/fchownat.html
