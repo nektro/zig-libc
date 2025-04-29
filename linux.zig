@@ -655,7 +655,7 @@ pub extern fn ctime(clock: *const time_t) ?[*:0]u8;
 
 /// char *ctime_r(const time_t *clock, char *buf);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/ctime_r.html
-pub const ctime_r = @compileError("TODO: ctime_r");
+pub extern fn ctime_r(noalias clock: [*c]const time_t, noalias buf: [*]u8) ?[*:0]u8;
 
 /// int dbm_clearerr(DBM *db);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/dbm_clearerr.html
