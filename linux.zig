@@ -453,7 +453,7 @@ pub extern fn clock_gettime(clock_id: clockid_t, tp: *struct_timespec) c_int;
 
 /// int clock_nanosleep(clockid_t clock_id, int flags, const struct timespec *rqtp, struct timespec *rmtp);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/clock_nanosleep.html
-pub const clock_nanosleep = @compileError("TODO: clock_nanosleep");
+pub extern fn clock_nanosleep(clock_id: clockid_t, flags: c_int, rqtp: *const struct_timespec, rmtp: ?*struct_timespec) c_int;
 
 /// int clock_settime(clockid_t clock_id, const struct timespec *tp);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/clock_settime.html
