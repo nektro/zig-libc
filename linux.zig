@@ -703,7 +703,7 @@ pub extern fn dirfd(dirp: *DIR) c_int;
 
 /// char *dirname(char *path);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/dirname.html
-pub const dirname = @compileError("TODO: dirname");
+pub extern fn dirname(path: ?[*:0]u8) [*:0]u8;
 
 /// div_t div(int numer, int denom);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/div.html
