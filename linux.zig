@@ -486,7 +486,7 @@ pub extern fn closelog() void;
 
 /// size_t confstr(int name, char *buf, size_t len);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/confstr.html
-pub const confstr = @compileError("TODO: confstr");
+pub extern fn confstr(name: c_int, buf: ?[*:0]u8, len: usize) usize;
 
 /// double complex conj(double complex z);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/conj.html
