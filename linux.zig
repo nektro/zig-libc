@@ -205,7 +205,7 @@ pub extern fn atoll(nptr: [*:0]const u8) c_longlong;
 
 /// char *basename(char *path);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/basename.html
-pub const basename = @compileError("TODO: basename");
+pub extern fn basename(path: [*:0]u8) [*:0]u8;
 
 /// int bind(int socket, const struct sockaddr *address, socklen_t address_len);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/bind.html
