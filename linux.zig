@@ -433,7 +433,7 @@ pub const cimagl = @compileError("TODO cimagl");
 
 /// void clearerr(FILE *stream);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/clearerr.html
-pub const clearerr = @compileError("TODO: clearerr");
+pub extern fn clearerr(stream: *FILE) void;
 
 /// clock_t clock(void);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/clock.html
