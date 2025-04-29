@@ -28,6 +28,7 @@ pub const clockid_t = c_int;
 pub const struct_timespec = linux.timespec;
 pub const DIR = opaque {};
 pub const time_t = i64;
+pub const div_t = extern struct { quot: c_int, rem: c_int };
 
 /// void _Exit(int status);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/_Exit.html
@@ -707,7 +708,7 @@ pub extern fn dirname(path: ?[*:0]u8) [*:0]u8;
 
 /// div_t div(int numer, int denom);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/div.html
-pub const div = @compileError("TODO: div");
+pub extern fn div(numer: c_int, denom: c_int) div_t;
 
 /// int dlclose(void *handle);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/dlclose.html
