@@ -720,7 +720,7 @@ pub extern fn dlerror() ?[*:0]u8;
 
 /// void *dlopen(const char *file, int mode);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/dlopen.html
-pub const dlopen = @compileError("TODO: dlopen");
+pub extern fn dlopen(file: [*:0]const u8, mode: c_int) ?*anyopaque;
 
 /// void *dlsym(void *restrict handle, const char *restrict name);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/dlsym.html
