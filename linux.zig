@@ -912,7 +912,7 @@ pub extern fn fchownat(fd: c_int, path: [*:0]const u8, owner: uid_t, group: gid_
 
 /// int fclose(FILE *stream);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/fclose.html
-pub const fclose = @compileError("TODO: fclose");
+pub extern fn fclose(stream: *FILE) c_int;
 
 /// int fcntl(int fildes, int cmd, ...);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/fcntl.html
