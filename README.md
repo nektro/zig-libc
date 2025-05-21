@@ -2,6 +2,9 @@
 
 ![loc](https://sloc.xyz/github/nektro/zig-libc)
 [![license](https://img.shields.io/github/license/nektro/zig-libc.svg)](https://github.com/nektro/zig-libc/blob/master/LICENSE)
+[![nektro @ github sponsors](https://img.shields.io/badge/sponsors-nektro-purple?logo=github)](https://github.com/sponsors/nektro)
+[![Zig](https://img.shields.io/badge/Zig-0.14-f7a41d)](https://ziglang.org/)
+[![Zigmod](https://img.shields.io/badge/Zigmod-latest-f7a41d)](https://github.com/nektro/zigmod)
 
 Manually written extern definitions for calling system libc functions.
 
@@ -36,13 +39,9 @@ This project exists to provide an exhaustive selection of crafted and type-safe 
 
 ## Built With
 
-- Most of this initial writing is being done with Zig 0.13 but many many others should work fine.
+- Most of this initial writing is being done with Zig 0.14 but many many others should work fine.
 - For the best integration experience, [Zigmod](https://github.com/nektro/zigmod) package manager is recommended.
 
 ## Command that helped dev
 
 `for x in $(cat linux.zig | grep TODO: | head -n1 | cut -d' ' -f3); do sed -i -e "s/pub const $x = @compileError(\"TODO\: $x\");/$(zig translate-c ./test.c -lc | grep "fn $x(")/" linux.zig; done`
-
-## License
-
-MIT
