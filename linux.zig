@@ -328,7 +328,7 @@ pub extern fn catclose(catd: nl_catd) c_int;
 
 /// char *catgets(nl_catd catd, int set_id, int msg_id, const char *s);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/catgets.html
-pub const catgets = @compileError("TODO: catgets");
+pub extern fn catgets(catd: nl_catd, set_id: c_int, msg_id: c_int, s: [*:0]const u8) [*:0]u8;
 
 /// nl_catd catopen(const char *name, int oflag);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/catopen.html
