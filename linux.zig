@@ -332,7 +332,7 @@ pub extern fn catgets(catd: nl_catd, set_id: c_int, msg_id: c_int, s: [*:0]const
 
 /// nl_catd catopen(const char *name, int oflag);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/catopen.html
-pub const catopen = @compileError("TODO: catopen");
+pub extern fn catopen(name: [*:0]const u8, oflag: c_int) nl_catd;
 
 /// double cbrt(double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/cbrt.html
