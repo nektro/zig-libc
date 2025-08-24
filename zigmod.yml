@@ -4,3 +4,4 @@ main: mod.zig
 license: MIT
 description: extern definitions for calling C functions
 dependencies:
+  - src: system_lib c
