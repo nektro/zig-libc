@@ -1,4 +1,5 @@
 const std = @import("std");
+const builtin = @import("builtin");
 const linux = std.os.linux;
 
 pub const clock_t = c_long;
@@ -4437,3 +4438,49 @@ pub extern fn y1(x: f64) f64;
 /// double yn(int n, double x);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/yn.html
 pub extern fn yn(n: c_int, x: f64) f64;
+
+//
+//
+
+pub const AT = struct {
+    pub const FDCWD = -100;
+    pub const SYMLINK_NOFOLLOW = 0x100;
+    pub const REMOVEDIR = 0x200;
+    pub const SYMLINK_FOLLOW = 0x400;
+    pub const EACCESS = 0x200;
+};
+
+pub const O = struct {
+    pub usingnamespace switch (builtin.target.cpu.arch) {
+        .x86_64,
+        => struct {
+            pub const CREAT = 0o100;
+            pub const EXCL = 0o200;
+            pub const NOCTTY = 0o400;
+            pub const TRUNC = 0o1000;
+            pub const APPEND = 0o2000;
+            pub const NONBLOCK = 0o4000;
+            pub const DSYNC = 0o10000;
+            pub const SYNC = 0o4010000;
+            pub const RSYNC = 0o4010000;
+            pub const DIRECTORY = 0o200000;
+            pub const NOFOLLOW = 0o400000;
+            pub const CLOEXEC = 0o2000000;
+            pub const ASYNC = 0o20000;
+            pub const DIRECT = 0o40000;
+            pub const LARGEFILE = 0o100000;
+            pub const NOATIME = 0o1000000;
+            pub const PATH = 0o10000000;
+            pub const TMPFILE = 0o20200000;
+            pub const NDELAY = O.NONBLOCK;
+        },
+        else => @compileError("TODO"),
+    };
+    pub const SEARCH = O.PATH;
+    pub const EXEC = O.PATH;
+    pub const TTY_INIT = 0;
+    pub const ACCMODE = (3 | O.SEARCH);
+    pub const RDONLY = 0;
+    pub const WRONLY = 1;
+    pub const RDWR = 2;
+};
