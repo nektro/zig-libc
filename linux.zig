@@ -2384,7 +2384,7 @@ pub const open_wmemstream = @compileError("TODO: open_wmemstream");
 
 /// int openat(int fd, const char *path, int oflag, ...);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/openat.html
-pub const openat = @compileError("TODO: openat");
+pub extern fn openat(fd: c_int, file: [*:0]const u8, oflag: c_int, ...) c_int;
 
 /// DIR *opendir(const char *dirname);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/opendir.html
