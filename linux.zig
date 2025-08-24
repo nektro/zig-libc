@@ -3052,7 +3052,7 @@ pub extern fn random() c_long;
 
 /// ssize_t read(int fildes, void *buf, size_t nbyte);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/read.html
-pub const read = @compileError("TODO: read");
+pub extern fn read(fd: c_int, buf: [*]u8, count: usize) isize;
 
 /// struct dirent *readdir(DIR *dirp);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/readdir.html
