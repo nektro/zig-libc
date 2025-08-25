@@ -30,6 +30,7 @@ pub const struct_timespec = linux.timespec;
 pub const DIR = opaque {};
 pub const time_t = i64;
 pub const div_t = extern struct { quot: c_int, rem: c_int };
+pub const struct_stat = linux.Stat;
 
 /// void _Exit(int status);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/_Exit.html
@@ -1193,7 +1194,7 @@ pub const fsetpos = @compileError("TODO: fsetpos");
 
 /// int fstat(int fildes, struct stat *buf);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/fstat.html
-pub const fstat = @compileError("TODO: fstat");
+pub extern fn fstat(fd: c_int, buf: *struct_stat) c_int;
 
 /// int fstatat(int fd, const char *restrict path, struct stat *restrict buf, int flag);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/fstatat.html
