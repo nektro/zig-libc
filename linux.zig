@@ -33,6 +33,7 @@ pub const div_t = extern struct { quot: c_int, rem: c_int };
 pub const off_t = linux.off_t;
 pub const ino_t = linux.ino_t;
 pub const struct_stat = linux.Stat;
+pub const struct_iovec = extern struct { base: [*]u8, len: usize };
 
 /// void _Exit(int status);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/_Exit.html
@@ -3076,7 +3077,7 @@ pub const readlinkat = @compileError("TODO: readlinkat");
 
 /// ssize_t readv(int fildes, const struct iovec *iov, int iovcnt);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/readv.html
-pub const readv = @compileError("TODO: readv");
+pub extern fn readv(fd: c_int, iovec: [*]const struct_iovec, count: c_int) isize;
 
 /// void *realloc(void *ptr, size_t size);
 /// https://pubs.opengroup.org/onlinepubs/9699919799.orig/functions/realloc.html
