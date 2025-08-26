@@ -4487,3 +4487,13 @@ pub const O = struct {
     pub const WRONLY = 1;
     pub const RDWR = 2;
 };
+
+pub const NAME_MAX = 255;
+pub const PATH_MAX = 4096;
+pub const NGROUPS_MAX = 32;
+pub const ARG_MAX = 131072;
+pub const IOV_MAX = 1024;
+pub const SYMLOOP_MAX = 40;
+pub const TZNAME_MAX = 6;
+pub const TTY_NAME_MAX = 32;
+pub const HOST_NAME_MAX = 255;
