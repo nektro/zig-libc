@@ -30,6 +30,8 @@ pub const struct_timespec = linux.timespec;
 pub const DIR = opaque {};
 pub const time_t = i64;
 pub const div_t = extern struct { quot: c_int, rem: c_int };
+pub const off_t = linux.off_t;
+pub const ino_t = linux.ino_t;
 pub const struct_stat = linux.Stat;
 
 /// void _Exit(int status);
