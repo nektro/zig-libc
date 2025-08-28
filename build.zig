@@ -4,6 +4,7 @@ pub fn build(b: *std.Build) void {
     const target = b.standardTargetOptions(.{});
     const mode = b.option(std.builtin.Mode, "mode", "") orelse .Debug;
     const disable_llvm = b.option(bool, "disable_llvm", "use the non-llvm zig codegen") orelse false;
+    _ = disable_llvm;
 
     const mod = b.addModule("extras", .{
         .root_source_file = b.path("mod.zig"),
@@ -18,6 +19,7 @@ pub fn build(b: *std.Build) void {
 
     const test_step = b.step("test", "Run all library tests");
     const tests_run = b.addRunArtifact(tests);
+    tests_run.setCwd(b.path("."));
     tests_run.has_side_effects = true;
     test_step.dependOn(&tests_run.step);
 }
